@@ -7,7 +7,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './assets/css/index.css'
 import Nav from './Nav';
 //import Panel from './Panel';
-import Header from './Header';
+//import Header from './Header';
+import MyHeader from './MyHeader';
 
 const muiTheme = getMuiTheme({
   appBar: {
@@ -28,7 +29,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Nav />
-    <Header />
+    <MyHeader />
     <div
       style={{
         margin: '0 auto',

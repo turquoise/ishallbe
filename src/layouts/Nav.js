@@ -6,7 +6,7 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
+//import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import Menu from 'material-ui/svg-icons/navigation/menu';
@@ -20,6 +20,10 @@ const styles = {
     cursor: 'pointer',
     margin: '5px',
     width: '40px'
+  },
+  a: {
+    textDecoration: 'none',
+    color: 'black'
   }
 }
 
@@ -74,13 +78,13 @@ class Nav extends React.Component {
           onRequestChange={(open) => this.setState({open})}
         >
           <MenuItem onClick={this.handleClose}>
-            <Link to="/">Home</Link>
+            <Link style={styles.a}  to="/">Home</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
-            <Link to="/page-2/">Go to page 2</Link>
+            <Link style={styles.a} to="/page-2/">Go to page 2</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
-            <Link to="/about/">About EuroArt</Link>
+            <Link style={styles.a}  to="/about/">About EuroArt</Link>
           </MenuItem>
         </Drawer>
       </div>
