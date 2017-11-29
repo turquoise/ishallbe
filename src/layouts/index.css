@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 icon {
   height: 50px;
+}
+
+.myheading {
+  font-family: 'Lobster', cursive;
 }
 
 html {

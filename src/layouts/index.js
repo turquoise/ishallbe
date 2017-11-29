@@ -4,18 +4,17 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import './assets/css/index.css'
+import './index.css';
 import Nav from './Nav';
 //import Panel from './Panel';
-//import Header from './Header';
-import MyHeader from './MyHeader';
+import Header from './Header';
+//import MyHeader from './MyHeader';
 
-const muiTheme = getMuiTheme({
-  appBar: {
-    height: 100,
-  },
-});
-
+// const muiTheme = getMuiTheme({
+//   appBar: {
+//     height: 100,
+//   },
+// });
 
 
 const TemplateWrapper = ({ children }) => (
@@ -24,12 +23,12 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Gatsby Default Starter"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'EuroArt Media' },
+        { name: 'keywords', content: "'Regina Jonas', 'I Shall Be'" },
       ]}
     />
     <Nav />
-    <MyHeader />
+    <Header />
     <div
       style={{
         margin: '0 auto',

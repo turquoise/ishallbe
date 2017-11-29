@@ -7,6 +7,7 @@
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-typography": "^1.7.10",
     "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
     "material-ui": "^0.19.4",

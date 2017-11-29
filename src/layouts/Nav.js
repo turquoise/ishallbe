@@ -10,7 +10,7 @@ import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton';
 import FontIcon from 'material-ui/FontIcon';
 import Menu from 'material-ui/svg-icons/navigation/menu';
-import './assets/css/index.css';
+import './index.css';
 import logo from  './assets/images/euroart.png';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';

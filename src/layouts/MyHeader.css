@@ -1,0 +1,38 @@
+
+  .container {
+    background-color: '#8c7156';
+    margin-bottom:'1.45rem';
+  }
+  
+  .main {
+    margin: '0 auto';
+    max-width: 960;
+    height: 220;
+    padding: '1.45rem 1.0875rem';
+  }
+  
+  .heading {
+    margin-left: '20px';
+    color: 'black';
+    text-decoration: none;
+    font-style: normal;
+  }
+  
+  .a {
+    text-decoration: 'none';
+    color: 'black';
+  }
+  
+  .Link {
+    color: 'white';
+    text-decoration: 'none';
+  }
+  
+  .img {
+    width: '100%';
+    height: 'auto';
+  }
+  
+  
+  
+  

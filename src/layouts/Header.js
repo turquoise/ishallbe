@@ -1,15 +1,15 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 import AppBar from 'material-ui/AppBar';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import { Grid, Row, Col } from 'react-flexbox-grid'
 import FlatButton from 'material-ui/FlatButton';
 import Regina from  './assets/images/reginajonas.png';
-import './assets/css/index.css'
+import './index.css';
 
-const styles = {
+const mystyles = {
   container: {
-    background: '#997f5e',
+    background: '#957a5f',
     marginBottom: '1.45rem'
   },
   main: {
@@ -26,23 +26,40 @@ const styles = {
     color: 'black'
   },
   Link: {
-    color: 'white',
+    color: 'black',
+    fontSize: '60px',
     textDecoration: 'none'
   },
   img: {
-    height: 200,
-  }
+    width: '100%',
+    height: 'auto'
+  },
+  
+  
 }
 
 const Header = () => (
-  <div style={styles.container} >
-    <div style={styles.main}>
-      <h1 style={styles.h1}>
-        <Link to="/" style={styles.Link} >
-          I Shall Be
-        </Link>
-      </h1>
-      <img style={styles.img} src={Regina} alt="Regina Jonas" />
+  <div style={mystyles.container} >
+    <div style={mystyles.main}>
+    <Grid>
+      <Row>
+        <Col xs={6} sm={6} md={6} lg={6} >
+          <h1 className="myheading">
+            <Link to="/" style={mystyles.Link} >
+              I Shall Be
+            </Link>
+          </h1>
+        </Col>
+        <Col xs={6} sm={4} md={4} lg={4}>  
+          <div style={mystyles.img}>
+            <img width="240px" src={Regina} alt="Regina Jonas" />
+          </div>
+        </Col>
+        <Col md={2} lg={2}>
+          <h3 className="myheading">Regina Jonas (1902-1944)</h3>
+        </Col>
+        </Row>
+      </Grid>
     </div>
   </div>
 )
