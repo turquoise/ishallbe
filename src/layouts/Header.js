@@ -5,6 +5,7 @@ import AppBar from 'material-ui/AppBar';
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import FlatButton from 'material-ui/FlatButton';
 import Regina from  './assets/images/reginajonas2.png';
+//import Paper from './assets/images/paper.png';
 import './index.css';
 
 const mystyles = {
@@ -62,7 +63,8 @@ const Header = () => (
         </Col>
         <Col md={2} lg={2}>
           <div style={mystyles.text} >
-          <h3 className="myheading" >Regina Jonas (1902-1944)</h3>
+            <h3 className="myheading" >Regina Jonas (1902-1944)</h3>
+            {/*<img width="200px" src={Paper} alt="Old Paper with a Pen"/>*/}
           </div>
         </Col>
         </Row>

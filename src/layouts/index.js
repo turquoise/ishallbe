@@ -10,11 +10,16 @@ import Nav from './Nav';
 import Header from './Header';
 //import FooterNav from './FooterNav';
 
-
+const mystyles = {
+  page: {
+    background: '#aa8956',
+    height: '1000px',
+  },
+}
 
 const TemplateWrapper = ({ children }) => (
   <MuiThemeProvider>
-  <div >
+  <div style={mystyles.page}>
     <Helmet
       title="Gatsby Default Starter"
       meta={[
