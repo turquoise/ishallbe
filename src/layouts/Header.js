@@ -15,7 +15,7 @@ const mystyles = {
   main: {
     margin: '0 auto',
     maxWidth: 960,
-    height: 280,
+    height: 310,
     padding: '1.45rem 1.0875rem',
   },
   h1: {
@@ -37,8 +37,8 @@ const mystyles = {
     width: '100%',
     height: 'auto'
   },
-  
-  
+
+
 }
 
 const Header = () => (
@@ -53,10 +53,10 @@ const Header = () => (
             </Link>
           </h1>
         </Col>
-        <Col xs={6} sm={4} md={4} lg={4}>  
+        <Col xs={6} sm={4} md={4} lg={4}>
           <div style={mystyles.img}>
           <a href="http://ravblog.ccarnet.org/2014/08/reflections-rabbiner-regina-jonas-mission/" target="_blank">
-            <img width="250px" src={Regina} alt="Regina Jonas" />
+            <img width="260px" src={Regina} alt="Regina Jonas" />
             </a>
           </div>
         </Col>
