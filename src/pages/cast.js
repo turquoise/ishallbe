@@ -30,8 +30,8 @@ const User = props =>
 
 const SecondPage = () => (
   <Container>
-    <h1>Hi from the second page</h1>
-    
+    <h1>Film Cast</h1>
+
 
     <User
       username="Jane Doe"

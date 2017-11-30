@@ -81,7 +81,10 @@ class Nav extends React.Component {
             <Link style={styles.a}  to="/">Home</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
-            <Link style={styles.a} to="/page-2/">Go to page 2</Link>
+            <Link style={styles.a} to="/i-shall-be/">About I Shall Be</Link>
+          </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <Link style={styles.a} to="/cast/">Film Cast</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/about/">About EuroArt</Link>
