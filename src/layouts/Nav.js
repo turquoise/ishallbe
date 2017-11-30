@@ -42,35 +42,35 @@ class Nav extends React.Component {
       open: false
     };
   }
-  
+
   handleToggle = () => {
     this.setState({
       open: !this.state.open
     });
   }
-  
+
   handleClose = () => {
     this.setState({
       open: false
     });
   }
-  
+
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
       <div>
         <AppBar
           iconElementLeft={<FlatButton
-            icon={<Menu />} 
+            icon={<Menu />}
             onClick={this.handleToggle}
           />}
           iconElementRight={
             <Link to="/about/">
               <img style={styles.img} src={logo} alt="Logo" />
             </Link>
-          }    
+          }
         />
-        
+
         <Drawer
           docked={false}
           width={200}
@@ -86,12 +86,15 @@ class Nav extends React.Component {
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/about/">About EuroArt</Link>
           </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <Link style={styles.a}  to="/contact/">Contact EuroArt</Link>
+          </MenuItem>
         </Drawer>
       </div>
       </MuiThemeProvider>
     )
   }
 }
-  
+
 
 export default Nav;

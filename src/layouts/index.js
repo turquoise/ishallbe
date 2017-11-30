@@ -8,13 +8,8 @@ import './index.css';
 import Nav from './Nav';
 //import Panel from './Panel';
 import Header from './Header';
-//import MyHeader from './MyHeader';
+//import FooterNav from './FooterNav';
 
-// const muiTheme = getMuiTheme({
-//   appBar: {
-//     height: 100,
-//   },
-// });
 
 
 const TemplateWrapper = ({ children }) => (
@@ -39,6 +34,7 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+
   </div>
   </MuiThemeProvider>
 )
