@@ -11,10 +11,12 @@ const IndexPage = ({ data }) => {
       {
         data.allMarkdownRemark.edges.map( ({node}) => (
           <div key={node.id} >
-            <h3>
-              {node.frontmatter.title} {" "}
-              <span>- {node.frontmatter.date}</span>
-            </h3>
+          <Link to={node.fields.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
+              <h3>
+                {node.frontmatter.title} {" "}
+                <span>- {node.frontmatter.date}</span>
+              </h3>
+            </Link>
           </div>
         ))
       }
@@ -33,6 +35,9 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
           }
           excerpt
         }
