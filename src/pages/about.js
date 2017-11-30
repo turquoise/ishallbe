@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Container from '../components/Container';
 
 const About = () => (
-  <div>
+  <Container>
     <h1>About EuroArt Media</h1>
     <p>Information about EuroArt Media</p>
     <Link to="/">Go back to the homepage</Link>
-  </div>
+  </Container>
 )
 
 export default About

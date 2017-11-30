@@ -1,13 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
+import Container from '../components/Container';
 
 const Contact = () => (
-  <div>
+  <Container>
   <form>
       Contact Form
     </form>
-  </div>
+  </Container>
 )
 
 export default Contact
