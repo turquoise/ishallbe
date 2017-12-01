@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Container from '../components/Container';
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import '../layouts/index.css';
 
@@ -27,6 +28,9 @@ const style = {
     height: 'auto',
     marginTop: '20px',
   },
+  blog: {
+    margin: 5,
+  }
 
 };
 
@@ -35,7 +39,7 @@ const IndexPage = ({ data }) => {
   console.log('data ', data);
   return (
     <Container>
-      <h1 className="myheading">Blog</h1>
+      <h1 className="myheading" style={style.blog} >Blog</h1>
       {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
       <Grid>
 
@@ -56,9 +60,12 @@ const IndexPage = ({ data }) => {
                 <h3 className="myheading" style={style.heading}>{node.frontmatter.title}</h3>
                 <div style={style.text}>{node.frontmatter.date}</div>
                 <p style={style.text} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <FlatButton label="Read More" fullWidth={true}/>
                 </Link>
+
                 </Col>
             </Row>
+
             </Paper>
           </div>
 
