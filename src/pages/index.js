@@ -4,12 +4,22 @@ import Container from '../components/Container';
 import Paper from 'material-ui/Paper';
 
 const style = {
-  height: 140,
+  height: 160,
   width: '100%',
   margin: 5,
   textAlign: 'center',
   display: 'inline-block',
   backgroundColor: '#e5d7b2',
+  text: {
+    textAlign: 'left',
+    marginLeft: '20px',
+  },
+  heading: {
+    marginTop: '5px',
+    textAlign: 'left',
+    marginLeft: '20px',
+  }
+
 };
 
 
@@ -25,10 +35,10 @@ const IndexPage = ({ data }) => {
           <div key={node.id} >
           <Paper style={style} zDepth={4}>
           <Link to={node.fields.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
-              <h3>
-                {node.frontmatter.title} {" "}
-                <span>- {node.frontmatter.date}</span>
-              </h3>
+              <h3 style={style.heading}>{node.frontmatter.title}</h3>
+              <div style={style.text}>{node.frontmatter.date}</div>
+              <p style={style.text} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              
             </Link>
             </Paper>
           </div>
@@ -47,6 +57,7 @@ export const query = graphql`
       edges {
         node {
           id
+          excerpt
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
@@ -54,7 +65,6 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
         }
       }
     }

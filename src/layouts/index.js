@@ -13,7 +13,7 @@ import Header from './Header';
 const mystyles = {
   page: {
     background: '#aa8956',
-    height: '1000px',
+    height: '200%',
   },
 }
 
