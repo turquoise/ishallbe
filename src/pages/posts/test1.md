@@ -3,6 +3,7 @@ title: "This is a test"
 date: "2017-11-30"
 author: "MG"
 category: "Scripts"
+cover: "https://picsum.photos/300/200/?image=202"
 ---
 
 

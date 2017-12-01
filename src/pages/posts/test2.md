@@ -3,6 +3,7 @@ title: "This is another test"
 date: "2017-11-30"
 author: "MG"
 category: "Filming"
+cover: "https://picsum.photos/300/200/?image=54"
 ---
 
 
