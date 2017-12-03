@@ -92,6 +92,10 @@ class Nav extends React.Component {
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/contact/">Contact EuroArt</Link>
           </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <Link style={styles.a}  to="/prismic/">Prismic test</Link>
+          </MenuItem>
+
         </Drawer>
       </div>
       </MuiThemeProvider>
