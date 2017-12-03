@@ -1,6 +1,6 @@
 
 module.exports = {
-  blogPostDir: "sample-posts", // The name of directory that contains your posts.
+  blogPostDir: "/pages/posts", // The name of directory that contains your posts.
   siteTitle: "I Shall Be", // Site title.
   siteTitleAlt: "I Shall Be", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
@@ -12,7 +12,7 @@ module.exports = {
   googleAnalyticsID: "", // GA tracking ID.
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   postDefaultCategoryID: "Culture", // Default category for posts.
-  userName: "Patricia Clarke", // Username to display in the author segment.
+  userName: "", // Username to display in the author segment.
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "UK", // User location to display in the author segment.
   userAvatar: "", // User avatar to display in the author segment.
