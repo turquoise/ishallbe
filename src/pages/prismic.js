@@ -40,6 +40,7 @@ class Prismic extends React.Component {
 
   render() {
     const postEdges = this.props.data.allPrismicDocument.edges;
+    console.log('postEdges ', postEdges);
     return (
       <div>
         <h1>Prismic CMS test</h1>

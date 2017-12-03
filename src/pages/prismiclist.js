@@ -5,12 +5,15 @@ class PrismicList extends React.Component {
 
   getPostList() {
     const postList = [];
-    this.props.postEdges.forEach(postEdge => {
-      postList.push({
-        title: postEdge.node.data.title.map( (item) => item.text),
-        body: postEdge.node.data.body.map( (item) => item.text),
+    if (this.props.postEdges) {
+      this.props.postEdges.forEach(postEdge => {
+        postList.push({
+          title: postEdge.node.data.title.map( (item) => item.text),
+          body: postEdge.node.data.body.map( (item) => item.text),
+        });
       });
-    });
+    }
+    
     return postList;
   }
 
