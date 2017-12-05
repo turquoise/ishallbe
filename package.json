@@ -5,7 +5,6 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "coffee-script": "^1.12.7",
-    "formsy-react": "^1.1.1",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-glamor": "^1.6.9",
@@ -24,9 +23,12 @@
     "jquery": "^3.2.1",
     "material-ui": "^0.19.4",
     "material-ui-icons": "^1.0.0-beta.17",
+    "mobx-react-form": "^1.32.2",
     "prop-types": "^15.6.0",
     "react-disqus-comments": "^1.1.1",
-    "react-flexbox-grid": "^2.0.0"
+    "react-flexbox-grid": "^2.0.0",
+    "validator": "^9.1.2",
+    "validatorjs": "^3.13.6"
   },
   "keywords": [
     "gatsby"
@@ -40,7 +42,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.8.2",
-    "valuelink": "^1.5.4"
+    "prettier": "^1.8.2"
   }
 }
