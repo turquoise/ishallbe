@@ -10,19 +10,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       }
     },
-    // {
-    //   resolve: `gatsby-source-graphcms`,
-    //   options: {
-    //     endpoint: `graphql_endpoint`,
-    //     token: `graphql_token`,
-    //     query: `{
-    //       allArtists {
-    //         id
-    //         name
-    //       }
-    //     }`,
-    //   },
-    // },
     {
       resolve: `gatsby-source-prismic`,
       options: {
@@ -30,6 +17,13 @@ module.exports = {
         accessToken: `MC5XaVFrVGlvQUFFSkZ0LWpQ.77-977-9Fe-_vVwn77-9Su-_vWLvv70a77-977-977-9Vu-_ve-_ve-_vXAd77-977-977-977-9Hu-_ve-_ve-_ve-_ve-_ve-_vQ`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: `rocybtov1ozk`,
+    //     accessToken: `6f35edf0db39085e9b9c19bd92943e4519c77e72c852d961968665f1324bfc94`,
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typography`,
     `gatsby-plugin-glamor`,

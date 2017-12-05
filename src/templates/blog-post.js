@@ -4,6 +4,8 @@ import Container from '../components/Container';
 import Paper from 'material-ui/Paper';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
+import config from '../../data/SiteConfig';
+import Disqus from '../components/Disqus';
 import '../layouts/index.css';
 
 const style = {
@@ -22,37 +24,57 @@ const style = {
 
 
 
-export default ({ data }) => {
-  const post = data.markdownRemark
-  return (
-    <Container>
-      <Paper style={style} zDepth={4}>
-        <div style={style.container}>
-          <Grid>
-            <Row>
-              <Col xs={12} sm={8} md={6} lg={6}>
-                <h1 className="myheading">{post.frontmatter.title}</h1>
-                <h2 className="myheading">By: {post.frontmatter.author}</h2>
-                <p className="myheading">Date: {post.frontmatter.date}</p>
-              </Col>
-              <Col xs={12} sm={8} md={6} lg={6}>
-                <img src={post.frontmatter.cover} />
-              </Col>
-            </Row>
-            <Row>
-            <Col>
+export default class BlogPost extends React.Component {
+  render() {
+    const { slug } = this.props.pathContext;
+    const postNode = this.props.data.markdownRemark;
+    const post = postNode.frontmatter;
+    if (!post.id) {
+      post.id = slug;
+    }
+    if (!post.id) {
+      post.category_id = config.postDefaultCategoryID;
+    }
 
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <Link to="/">
-            <FlatButton label="Back to Blog" fullWidth={true}/>
-          </Link>
-          </Col>
-          </Row>
-          </Grid>
-        </div>
-      </Paper>
-    </Container>
-  )
+    return (
+      <Container>
+        <Paper style={style} zDepth={4}>
+          <div style={style.container}>
+            <Grid>
+              <Row>
+                <Col xs={12} sm={8} md={6} lg={6}>
+                  <h1 className="myheading">{post.title}</h1>
+                  <h2 className="myheading">By: {post.author}</h2>
+                  <p className="myheading">Date: {post.date}</p>
+                </Col>
+                <Col xs={12} sm={8} md={6} lg={6}>
+                  <img src={post.cover} />
+                </Col>
+              </Row>
+              <Row>
+              <Col>
+
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              
+            <Link to="/">
+              <FlatButton label="Back to Blog" fullWidth={true}/>
+            </Link>
+            <Disqus postNode={postNode} />
+            </Col>
+            </Row>
+
+
+
+            </Grid>
+            
+
+          </div>
+
+        </Paper>
+      </Container>
+    )
+  }
+
 }
 
 
@@ -66,6 +88,10 @@ export const query = graphql`
         author
         date
       }
+      fields {
+        slug
+      }
     }
   }
 `
+
