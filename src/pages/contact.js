@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField';
 
 import Container from '../components/Container';
 
-// 
+//
 
 
 class Contact extends React.Component {
@@ -16,7 +16,7 @@ class Contact extends React.Component {
 
 
   render() {
-    const errorMessage = this.props.getErrorMessage();
+    
     return (
       <Container>
         Contact
