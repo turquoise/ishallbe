@@ -38,7 +38,7 @@ class Disqus extends React.Component {
     
     return (
       <div>
-        <h1>Disqus</h1>
+        
         <ReactDisqusComments
         shortname={config.disqusShortname}
         identifier={post.title}
