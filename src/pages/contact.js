@@ -12,6 +12,7 @@ import { TextValidator} from 'react-material-ui-form-validator';
 import {brown500, grey900} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import '../layouts/index.css';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -106,7 +107,7 @@ class Contact extends React.Component {
         <Row>
         <Col>
 
-        <h1 style={style.container}>Contact EuroArt</h1>
+        <h1 className="myheading"  style={style.container}>Contact EuroArt</h1>
         <ValidatorForm style={style.container}
               ref="form"
               id="form"
