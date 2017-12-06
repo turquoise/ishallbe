@@ -1,5 +1,5 @@
 import React from 'react'
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import Link from 'gatsby-link'
 import Container from '../components/Container';
 
@@ -27,11 +27,7 @@ export class MapContainer extends React.Component {
         name={'EuroArt'}
         position={{ lat: 51.37720, lng: -2.35166 }} />
 
-      {/*<InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-            <h1>{this.state.selectedPlace.name}</h1>
-          </div>
-      </InfoWindow>*/}
+      
     </Map>
     
 

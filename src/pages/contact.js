@@ -168,7 +168,7 @@ class Contact extends React.Component {
           </ValidatorForm>
           </Col>
           <Col>
-            <GoogleMap />
+            <h2>Map goes here</h2>
           </Col>
           </Row>
           <Row>
