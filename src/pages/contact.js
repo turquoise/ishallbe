@@ -52,6 +52,7 @@ class Contact extends React.Component {
   handleSubmit(event) {
         event.preventDefault();
         const { formData } = this.state;
+        console.log('formData ', formData);
         this.setState({
           submitted: true
         })
@@ -94,7 +95,7 @@ class Contact extends React.Component {
               <TextValidator
                   floatingLabelText="Email"
                   onChange={this.handleChange}
-                  tyype="email"
+                  type="email"
                   name="email"
                   value={formData.email}
                   validators={['required', 'isEmail']}
