@@ -78,7 +78,7 @@ class Nav extends React.Component {
           onRequestChange={(open) => this.setState({open})}
         >
           <MenuItem onClick={this.handleClose}>
-            <Link style={styles.a}  to="/">Home</Link>
+            <Link style={styles.a}  to="/">Blog</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a} to="/i-shall-be/">About I Shall Be</Link>

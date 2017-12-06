@@ -51,16 +51,35 @@ const SecondPage = () => (
     <h1 style={style.container} >Film Cast</h1>
     <div style={style.container}>
     <User
-      username="Jane Doe"
+      username="Name 1"
       avatar="http://via.placeholder.com/150x150"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
 
     <User
-      username="Bob Smith"
+      username="Name 2"
       avatar="http://via.placeholder.com/150x150"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
+
+    <User
+      username="Name 3"
+      avatar="http://via.placeholder.com/150x150"
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
+    />
+
+    <User
+      username="Name 4"
+      avatar="http://via.placeholder.com/150x150"
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
+    />
+
+    <User
+      username="Name 5"
+      avatar="http://via.placeholder.com/150x150"
+      excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
+    />
+
     </div>
 
     </Paper>
