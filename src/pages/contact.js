@@ -9,6 +9,18 @@ import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import { ValidatorForm } from 'react-form-validator-core';
 import { TextValidator} from 'react-material-ui-form-validator';
+import {brown500, grey900} from 'material-ui/styles/colors';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: grey900,
+    borderColor: brown500,
+    primary1Color: brown500,
+    accent1Color: brown500,
+  }
+});
 
 const style = {
   height: '100%',
@@ -58,7 +70,7 @@ class Contact extends React.Component {
           submitted: true
         })
         axios.post('https://formspree.io/monica.gosschalk@btinternet.com', {
-        
+
             name: formData.name,
             email: formData.email,
             subject: formData.subject,
@@ -90,8 +102,10 @@ class Contact extends React.Component {
   render() {
     const { formData, submitted } = this.state;
     return (
+      <MuiThemeProvider muiTheme={muiTheme}>
       <Container>
       <Paper style={style} zDepth={1}>
+
         <h1 style={style.container}>Contact EuroArt</h1>
         <ValidatorForm style={style.container}
               ref="form"
@@ -153,6 +167,7 @@ class Contact extends React.Component {
 
         </Paper>
       </Container>
+      </MuiThemeProvider>
 
     )
   }
