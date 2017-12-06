@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "axios": "^0.17.1",
     "coffee-script": "^1.12.7",
     "gatsby": "^1.9.119",
     "gatsby-link": "^1.6.28",

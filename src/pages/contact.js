@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Link from 'gatsby-link';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
@@ -56,19 +57,34 @@ class Contact extends React.Component {
         this.setState({
           submitted: true
         })
-        fetch('https://formspree.io/monica.gosschalk@btinternet.com', {
-          method: 'POST',
-          body: formData,
+        axios.post('https://formspree.io/monica.gosschalk@btinternet.com', {
+        
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+
         })
-        this.setState({
-          submitted: false,
-          formData: {
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-          }
+        .then( (response) => {
+          this.setState({
+            submitted: false,
+            formData: {
+              name: '',
+              email: '',
+              subject: '',
+              message: '',
+            }
+          })
         })
+        .catch( (error) => {
+          console.log(error);
+          form.reset();
+        })
+        // fetch('https://formspree.io/monica.gosschalk@btinternet.com', {
+        //   method: 'POST',
+        //   body: formData,
+        // })
+
     }
 
   render() {
@@ -79,6 +95,7 @@ class Contact extends React.Component {
         <h1 style={style.container}>Contact EuroArt</h1>
         <ValidatorForm style={style.container}
               ref="form"
+              id="form"
               onSubmit={this.handleSubmit}
           >
 
