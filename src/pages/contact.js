@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import GoogleMap from '../components/GoogleMap';
 import Link from 'gatsby-link';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import Container from '../components/Container';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 import { ValidatorForm } from 'react-form-validator-core';
 import { TextValidator} from 'react-material-ui-form-validator';
 import {brown500, grey900} from 'material-ui/styles/colors';
@@ -32,11 +32,12 @@ const style = {
   container: {
     marginTop: '20px',
     marginLeft: '20px',
+  address: {
+    marginTop: '100px',
+  }
 
   }
 };
-
-
 
 class Contact extends React.Component {
   constructor(props) {
@@ -92,11 +93,7 @@ class Contact extends React.Component {
           console.log(error);
           form.reset();
         })
-        // fetch('https://formspree.io/monica.gosschalk@btinternet.com', {
-        //   method: 'POST',
-        //   body: formData,
-        // })
-
+        
     }
 
   render() {
@@ -105,6 +102,9 @@ class Contact extends React.Component {
       <MuiThemeProvider muiTheme={muiTheme}>
       <Container>
       <Paper style={style} zDepth={1}>
+      <Grid>
+        <Row>
+        <Col>
 
         <h1 style={style.container}>Contact EuroArt</h1>
         <ValidatorForm style={style.container}
@@ -155,8 +155,9 @@ class Contact extends React.Component {
                   errorMessages={['this field is required']}
               />
               <br />
-              <RaisedButton
+              <FlatButton
                   type="submit"
+                  fullWidth={true}
                   label={
                       (submitted && 'Your form is submitted!')
                       || (!submitted && 'Submit')
@@ -164,6 +165,28 @@ class Contact extends React.Component {
                   disabled={submitted}
               />
           </ValidatorForm>
+          </Col>
+          <Col>
+            <GoogleMap />
+          </Col>
+          </Row>
+          <Row>
+            <Col xs={6} sm={6} md={6} lg={6} >
+              <div style={style.container} >
+                <p>3 Bridge Lock Mews</p>
+                <p>Pultney Road</p>
+                <p>Bath, BA2 4DG</p>
+              </div>
+              
+            </Col>
+            <Col  xs={6} sm={6} md={6} lg={6} >
+              <div  >
+                <p><span>Email: </span> euroart1@btinternet.com</p>
+                <p><span>Mobile: </span>07768876874 </p>
+              </div>
+            </Col>
+          </Row>
+          </Grid>
 
         </Paper>
       </Container>

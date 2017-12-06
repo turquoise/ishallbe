@@ -1,7 +1,24 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Container from '../components/Container';
+import Paper from 'material-ui/Paper';
 //import styles from './pages.css';
+
+const style = {
+  height: '100%',
+  width: '100%',
+  margin: 5,
+  textAlign: 'left',
+  display: 'inline-block',
+  backgroundColor: '#e5d7b2',
+  container: {
+    marginTop: '20px',
+    marginLeft: '30px',
+    marginRight: '30px',
+
+  }
+};
+
 
 const User = props =>
 <div
@@ -30,9 +47,9 @@ const User = props =>
 
 const SecondPage = () => (
   <Container>
-    <h1>Film Cast</h1>
-
-
+    <Paper style={style} zDepth={1}>
+    <h1 style={style.container} >Film Cast</h1>
+    <div style={style.container}>
     <User
       username="Jane Doe"
       avatar="http://via.placeholder.com/150x150"
@@ -44,8 +61,9 @@ const SecondPage = () => (
       avatar="http://via.placeholder.com/150x150"
       excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
+    </div>
 
-    <Link to="/">Go back to the homepage</Link>
+    </Paper>
   </Container>
 )
 
