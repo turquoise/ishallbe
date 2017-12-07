@@ -15,8 +15,9 @@ const style = {
   },
   text: {
     textAlign: 'left',
-    marginLeft: '20px',
+    marginLeft: '10px',
     marginTop: '5px',
+    marginRight: '10px',
   },
   heading: {
     marginTop: '5px',
@@ -47,6 +48,7 @@ class ScriptsList extends React.Component {
           date: postEdge.node.frontmatter.date,
           excerpt: postEdge.node.excerpt,
           slug: postEdge.node.fields.slug,
+          category: postEdge.node.frontmatter.category,
         });
       });
     }
@@ -83,6 +85,7 @@ class ScriptsList extends React.Component {
                   <Link to={post.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
                   <h3 className="myheading" style={style.heading}>{post.title}</h3>
                   <div style={style.text}>{post.date}</div>
+                  <div style={style.text}>Category: {post.category}</div>
                   <p style={style.text} dangerouslySetInnerHTML={{ __html: post.excerpt }} />
                   
                   </Link>

@@ -6,14 +6,15 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './index.css';
 import Nav from './Nav';
-//import Panel from './Panel';
+import Panel from './Panel';
 import Header from './Header';
 //import FooterNav from './FooterNav';
 
 const mystyles = {
   page: {
     background: '#aa8956',
-    height: '200%',
+    height: '100%',
+    width: '100%',
   },
 }
 
@@ -39,6 +40,7 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <Panel />
 
   </div>
   </MuiThemeProvider>

@@ -4,18 +4,20 @@ import Helmet from 'react-helmet'
 
 
 //import './assets/materialize/js/materialize';
-
+const styles = {
+  footer: {
+    height: '200px',
+    margin: '0px',
+    width: '100%',
+  },
+  
+}
 
 const Panel = () => (
   
-  <div className="row">
-      <div className="col s12">
-        <div className="card-panel grey">
-          <span className="black-text">Panel
-          </span>
-        </div>
-      </div>
-    </div>
+  <div style={styles.footer}>
+      
+  </div>
 
 )
 
