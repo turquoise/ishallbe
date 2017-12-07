@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Link from 'gatsby-link'
 import Container from '../components/Container';
 // api key 'AIzaSyD-oU-btZC66MPOfAo1Z_s08kd8g95SqaU'
@@ -15,7 +14,13 @@ const styles = {
 
 
 class GoogleMap extends React.Component {
-
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
 }
+  
 
 export default GoogleMap

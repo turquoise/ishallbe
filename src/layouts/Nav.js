@@ -24,7 +24,8 @@ const styles = {
   a: {
     textDecoration: 'none',
     color: 'black'
-  }
+  },
+  
 }
 
 const muiTheme = getMuiTheme({
