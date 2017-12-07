@@ -63,6 +63,7 @@ class Nav extends React.Component {
         <AppBar
           iconElementLeft={<FlatButton
             icon={<Menu />}
+            label="Menu"
             onClick={this.handleToggle}
           />}
           iconElementRight={
