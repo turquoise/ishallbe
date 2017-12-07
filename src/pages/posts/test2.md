@@ -2,11 +2,11 @@
 title: "This is another test"
 date: "2017-11-30"
 author: "Test Author"
-category: "Filming"
+category: "filming"
 cover: "https://picsum.photos/300/200/?image=54"
 ---
 
-# Heading 1
+# Heading 1 Filming
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt tempor tellus et dictum. Praesent eleifend venenatis imperdiet. In elit arcu, vestibulum eu justo id, porta iaculis lectus. Donec id dictum ex, et eleifend felis. Aenean placerat eros erat, a vehicula mi posuere sed. Etiam lacinia commodo nibh nec condimentum. Suspendisse at urna nulla. Donec vestibulum sagittis diam at facilisis. Nulla vitae varius magna. Curabitur consectetur sapien tellus, at fermentum lorem auctor ut. Aliquam tortor quam, maximus quis purus nec, tempor viverra leo. Nunc euismod enim ut facilisis laoreet. Cras dictum ante id erat efficitur semper. Morbi venenatis nibh quis consectetur auctor.
 

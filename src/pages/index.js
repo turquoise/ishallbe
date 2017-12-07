@@ -4,15 +4,31 @@ import Container from '../components/Container';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
+import IndexList from './indexlist';
 import '../layouts/index.css';
 
 const style = {
-  height: 220,
-  width: '100%',
-  marginTop: '5px',
-  textAlign: 'center',
-  display: 'inline-block',
-  backgroundColor: '#e5d7b2',
+  paper: {
+    height: 220,
+    width: '100%',
+    marginTop: '5px',
+    textAlign: 'center',
+    display: 'inline-block',
+    backgroundColor: '#e5d7b2',
+  },
+  category: {
+    width: '100%',
+    marginTop: '5px',
+    textAlign: 'left',
+    display: 'inline-block',
+    backgroundColor: 'black',
+    color: '#aa8956',
+  },
+  categorydiv: {
+    marginTop: '10px',
+    marginLeft: '10px',
+    cursor: 'pointer',
+  },
   text: {
     textAlign: 'left',
     marginLeft: '20px',
@@ -24,7 +40,7 @@ const style = {
     marginLeft: '20px',
   },
   img: {
-    width: '85%',
+    width: '75%',
     height: 'auto',
     marginTop: '20px',
   },
@@ -36,44 +52,52 @@ const style = {
 
 
 class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      category: 'all'
+    }
+    
+  }
+
+  getPostList = () => {
+    const postEdges = this.props.data.allMarkdownRemark.edges;
+    if (this.state.category === 'all') {
+      return <IndexList postEdges={postEdges} />
+    }
+
+  }
+
   render() {
-    console.log('this.props ', this.props);
+    //const postEdges = this.props.data.allMarkdownRemark.edges;
+    console.log('this.state', this.state.category);
+    //console.log('postEdges ', postEdges);
     return (
       <Container>
+        <Grid>
         <h1 className="myheading" style={style.blog} >Blog</h1>
         {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
-        <Grid>
+        <Row>
+          <Col xs={10} sm={10} md={10} lg={10}>
+         
+          {this.getPostList()}
+           
 
-        {
-          this.props.data.allMarkdownRemark.edges.map( ({node}) => (
-
-            <div key={node.id} >
-            <Paper style={style} zDepth={4}>
-            <Row>
-                  <Col xs={5} sm={5} md={5} lg={5}>
-                  <Link to={node.fields.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
-                  <img style={style.img}  src={node.frontmatter.cover} />
-                  </Link>
-                  </Col>
-
-                  <Col xs={7} sm={7} md={7} lg={7}>
-                  <Link to={node.fields.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
-                  <h3 className="myheading" style={style.heading}>{node.frontmatter.title}</h3>
-                  <div style={style.text}>{node.frontmatter.date}</div>
-                  <p style={style.text} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  <FlatButton label="Read More" fullWidth={true}/>
-                  </Link>
-
-                  </Col>
-              </Row>
-
-              </Paper>
+          </Col>
+          <Col xs={2} sm={2} md={2} lg={2}>
+          <Paper style={style.category} zDepth={1}>
+          <h4>Categories:</h4>
+          <div style={style.categorydiv}>
+            <h5 onClick={ () => this.setState({ category: 'all'}) }>All</h5>
+            <h5 onClick={ () => this.setState({ category: 'scripts'}) }>Scripts</h5>
+            <h5 onClick={ () => this.setState({ category: 'location'}) }>Location</h5>
+            <h5 onClick={ () => this.setState({ category: 'filming'}) }>Filming</h5>
             </div>
-
-          ))
-        }
-
-      </Grid>
+          </Paper>
+          </Col>
+        </Row>
+        
+        </Grid>
       </Container>
     )
   }

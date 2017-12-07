@@ -1,9 +1,11 @@
 import React from 'react'
-import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+
 import Link from 'gatsby-link'
 import Container from '../components/Container';
+// api key 'AIzaSyD-oU-btZC66MPOfAo1Z_s08kd8g95SqaU'
 
-// https://www.npmjs.com/package/google-maps-react
+{/* <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=BA2%204DG&key=AIzaSyD-oU-btZC66MPOfAo1Z_s08kd8g95SqaU" allowfullscreen></iframe> */}
+
 const styles = {
   width: '400px',
   height: '400px',
@@ -11,33 +13,9 @@ const styles = {
 }
 
 
-export class MapContainer extends React.Component {
 
-  render() {
-    return (
-      <Container>
-      <Map
-        google={this.props.google}
-        style={styles}
-        zoom={15}
-        initialCenter={{ lat: 51.37720, lng: -2.35166}}>
+class GoogleMap extends React.Component {
 
-      <Marker
-        title={'EuroArt Media'}
-        name={'EuroArt'}
-        position={{ lat: 51.37720, lng: -2.35166 }} />
-
-      
-    </Map>
-    
-
-      </Container>
-    )
-  }
 }
 
-
-
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyAyesbQMyKVVbBgKVi2g6VX7mop2z96jBo')
-})(MapContainer)
+export default GoogleMap
