@@ -20,6 +20,7 @@
     "gatsby-transformer-json": "^1.0.13",
     "gatsby-transformer-remark": "^1.7.23",
     "gatsby-transformer-yaml": "^1.5.12",
+    "google-map-react": "^0.25.0",
     "hammerjs": "^2.0.8",
     "jquery": "^3.2.1",
     "material-ui": "^0.19.4",
@@ -28,7 +29,6 @@
     "react-disqus-comments": "^1.1.1",
     "react-flexbox-grid": "^2.0.0",
     "react-form-validator-core": "^0.2.0",
-    "react-gmaps": "^1.7.0",
     "react-material-ui-form-validator": "^1.0.4",
     "validator": "^9.1.2"
   },
@@ -44,6 +44,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "google-maps": "^3.2.1",
     "prettier": "^1.8.2"
   }
 }
