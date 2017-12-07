@@ -39,8 +39,8 @@ class ScriptsList extends React.Component {
 
   getPostList() {
     const postList = [];
-    if (this.props.postEdges) {
-      this.props.postEdges.forEach(postEdge => {
+    if (this.props.scriptsEdges) {
+      this.props.scriptsEdges.forEach(postEdge => {
         postList.push({
           title: postEdge.node.frontmatter.title,
           cover: postEdge.node.frontmatter.cover,
@@ -57,7 +57,7 @@ class ScriptsList extends React.Component {
     
   render() {
     const postList = this.getPostList();
-    console.log('postList ', postList);
+    console.log('scripts postList ', postList);
     return (
       <div>
         <Grid>

@@ -5,6 +5,9 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import IndexList from './indexlist';
+import LocationList from './locationlist';
+import FilmingList from './filminglist';
+import ScriptsList from './scriptslist';
 import '../layouts/index.css';
 
 const style = {
@@ -52,26 +55,46 @@ const style = {
 
 
 class IndexPage extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       category: 'all'
     }
+    console.log('this.props from index ', this.props);
+    
     
   }
 
   getPostList = () => {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.posts.edges;
+    const locationEdges = this.props.data.location.edges;
+    const scriptsEdges = this.props.data.scripts.edges;
+    const filmingEdges = this.props.data.filming.edges;
+    
     if (this.state.category === 'all') {
       return <IndexList postEdges={postEdges} />
+    } 
+    if (this.state.category === 'scripts') {
+      return <ScriptsList scriptsEdges={scriptsEdges} />
+
     }
+    if (this.state.category === 'location') {
+      return <LocationList locationEdges={locationEdges} />
+    }
+    if (this.state.category === 'filming') {
+      return <FilmingList filmingEdges={filmingEdges} />
+
+    }
+   
 
   }
 
   render() {
-    //const postEdges = this.props.data.allMarkdownRemark.edges;
+    
     console.log('this.state', this.state.category);
-    //console.log('postEdges ', postEdges);
+    
+    
     return (
       <Container>
         <Grid>
@@ -104,26 +127,84 @@ class IndexPage extends React.Component {
 }
 
 export const query = graphql`
-  query IndexQuery {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-            cover
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-            slug
-          }
+query IndexQuery {
+  posts: allMarkdownRemark {
+    totalCount
+    edges {
+      node {
+        id
+        excerpt
+        frontmatter {
+          title
+          category
+          cover
+          date(formatString: "DD MMMM, YYYY")
+        }
+        fields {
+          slug
         }
       }
     }
   }
-  `
+  location: allMarkdownRemark(filter: {frontmatter: {category: {eq: "location"}}}) {
+    totalCount
+    edges {
+      node {
+        id
+        excerpt
+        frontmatter {
+          title
+          cover
+          category
+          date(formatString: "DD MMMM, YYYY")
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+
+  scripts: allMarkdownRemark(filter: {frontmatter: {category: {eq: "scripts"}}}) {
+    totalCount
+    edges {
+      node {
+        id
+        excerpt
+        frontmatter {
+          title
+          cover
+          category
+          date(formatString: "DD MMMM, YYYY")
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+
+  filming: allMarkdownRemark(filter: {frontmatter: {category: {eq: "filming"}}}) {
+    totalCount
+    edges {
+      node {
+        id
+        excerpt
+        frontmatter {
+          title
+          cover
+          category
+          date(formatString: "DD MMMM, YYYY")
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+
+}
+`
 
 
 export default IndexPage

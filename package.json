@@ -6,7 +6,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "coffee-script": "^1.12.7",
-    "gatsby": "^1.9.119",
+    "gatsby": "^1.9.128",
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-glamor": "^1.6.9",
     "gatsby-plugin-react-helmet": "^1.0.8",
