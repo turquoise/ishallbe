@@ -74,14 +74,14 @@ class FilmingList extends React.Component {
             <Row>
             
             
-                  <Col xs={5} sm={5} md={5} lg={5}>
+                  <Col xs={4} sm={4} md={4} lg={4}>
                   <Link to={post.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
                   <img style={style.img}  src={post.cover} />
                   <FlatButton label="Read More" fullWidth={true}/>
                   </Link>
                   </Col>
 
-                  <Col xs={7} sm={7} md={7} lg={7}>
+                  <Col xs={8} sm={8} md={8} lg={8}>
                   <Link to={post.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
                   <h3 className="myheading" style={style.heading}>{post.title}</h3>
                   <div style={style.text}>{post.date}</div>
