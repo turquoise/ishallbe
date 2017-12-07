@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import GoogleMap from '../components/GoogleMap';
 import Link from 'gatsby-link';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
@@ -168,7 +167,7 @@ class Contact extends React.Component {
           </ValidatorForm>
           </Col>
           <Col>
-            <h2>Map goes here</h2>
+            map goes here
           </Col>
           </Row>
           <Row>

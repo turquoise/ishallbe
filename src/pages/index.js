@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Container from '../components/Container';
+import IndexContainer from '../components/IndexContainer';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
@@ -14,14 +14,14 @@ const style = {
   paper: {
     height: 220,
     width: '100%',
-    marginTop: '5px',
+    marginTop: '2px',
     textAlign: 'center',
     display: 'inline-block',
     backgroundColor: '#e5d7b2',
   },
   category: {
     width: '100%',
-    marginTop: '5px',
+    marginTop: '2px',
     textAlign: 'left',
     display: 'inline-block',
     backgroundColor: 'black',
@@ -48,7 +48,7 @@ const style = {
     marginTop: '20px',
   },
   blog: {
-    margin: 5,
+    margin: 0,
   }
 
 };
@@ -84,19 +84,14 @@ class IndexPage extends React.Component {
     }
     if (this.state.category === 'filming') {
       return <FilmingList filmingEdges={filmingEdges} />
-
     }
-   
-
   }
 
   render() {
     
-    console.log('this.state', this.state.category);
-    
-    
+    //console.log('this.state', this.state.category);
     return (
-      <Container>
+      <IndexContainer>
         <Grid>
         <h1 className="myheading" style={style.blog} >Blog</h1>
         {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
@@ -109,7 +104,7 @@ class IndexPage extends React.Component {
           </Col>
           <Col xs={2} sm={2} md={2} lg={2}>
           <Paper style={style.category} zDepth={1}>
-          <h4>Categories:</h4>
+          <h3 className="myheading" style={style.categorydiv}>Categories:</h3>
           <div style={style.categorydiv}>
             <h5 onClick={ () => this.setState({ category: 'all'}) }>All</h5>
             <h5 onClick={ () => this.setState({ category: 'scripts'}) }>Scripts</h5>
@@ -121,7 +116,7 @@ class IndexPage extends React.Component {
         </Row>
         
         </Grid>
-      </Container>
+      </IndexContainer>
     )
   }
 }
