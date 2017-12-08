@@ -7,6 +7,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './index.css';
 import Nav from './Nav';
 import Panel from './Panel';
+import FooterNav from './FooterNav';
 import Header from './Header';
 //import FooterNav from './FooterNav';
 
@@ -41,6 +42,7 @@ const TemplateWrapper = ({ children }) => (
       {children()}
     </div>
     <Panel />
+    <FooterNav />
 
   </div>
   </MuiThemeProvider>
