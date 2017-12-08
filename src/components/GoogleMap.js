@@ -4,7 +4,7 @@ import GoogleMapReact from 'google-map-react'
 import Container from '../components/Container';
 
 // api key 'AIzaSyD-oU-btZC66MPOfAo1Z_s08kd8g95SqaU'
-
+// apiKey={'AIzaSyD-oU-btZC66MPOfAo1Z_s08kd8g95SqaU'}
 
 
 const style = {
@@ -13,27 +13,42 @@ const style = {
     height: '400px',
     marginLeft: '60px',
     marginTop: '40px',
+  },
+  place: {
+    width: '80px',
+    padding: '10px',
+    border: '1px solid brown',
+    background: '#e5d7b2',
+    color: 'black',
+    fontSize: '16px',
   }
 }
 
-const AnyReactComponent = ({ text }) => <div>{ text }</div>;
+
 
 class GoogleMap extends React.Component {
-  static defaultProps = {
-    center: { lat: 51.37720, lng: -2.35166 },
-    zoom: 12
+  constructor(props) {
+    super(props);
+    this.state = {
+      center: {
+        lat: 51.37720,
+        lng: -2.35166
+      },
+      zoom: 12
+    }
   }
+  // static defaultProps = {
+  //   center: { lat: 51.37720, lng: -2.35166 },
+  //   zoom: 12
+  // }
   render() {
     return (
       <div style={style.map}>
         <GoogleMapReact
-          defaultCenter={ this.props.center }
-          defaultZoom={ this.props.zoom }>
-          <AnyReactComponent
-            lat={ 40.7473310 }
-            lng={ -73.8517440 }
-            text={ 'EuroArt' }
-          />
+          defaultCenter={ this.state.center }
+          defaultZoom={ this.state.zoom }>
+          <div style={style.place} lat={51.37720} lng={-2.35166}>EuroArt</div>
+          
         </GoogleMapReact>
         
       </div>
