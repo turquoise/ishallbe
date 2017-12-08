@@ -24,30 +24,43 @@ const style = {
   }
 }
 
-
+const AnyReactComponent = ({ text }) => (
+  <div style={{
+    position: 'relative', color: 'brown', background: '#e5d7b2',
+    height: 25, width: 50, top: -20, left: -30,    
+  }}>
+    {text}
+  </div>
+);
 
 class GoogleMap extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      center: {
-        lat: 51.37720,
-        lng: -2.35166
-      },
-      zoom: 12
-    }
-  }
-  // static defaultProps = {
-  //   center: { lat: 51.37720, lng: -2.35166 },
-  //   zoom: 12
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     center: {
+  //       lat: 51.37720,
+  //       lng: -2.35166
+  //     },
+  //     zoom: 12
+  //   }
   // }
+  static defaultProps = {
+    center: { lat: 51.37720, lng: -2.35166 },
+    zoom: 14
+  }
   render() {
     return (
       <div style={style.map}>
         <GoogleMapReact
-          defaultCenter={ this.state.center }
-          defaultZoom={ this.state.zoom }>
-          <div style={style.place} lat={51.37720} lng={-2.35166}>EuroArt</div>
+          key={'AIzaSyD-oU-btZC66MPOfAo1Z_s08kd8g95SqaU'}
+          defaultCenter={ this.props.center }
+          defaultZoom={ this.props.zoom }>
+          <AnyReactComponent 
+          lat={51.37720} 
+          lng={-2.35166} 
+          text={'EuroArt'} 
+        />
+          
           
         </GoogleMapReact>
         
