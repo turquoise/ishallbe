@@ -45,7 +45,7 @@ const About = () => (
       <Col xs={6} sm={6} md={6} lg={6} >
         <div style={style.container}>
         <h2 className="myheading"   style={style.heading}>Name 1</h2>
-        <img style={style.image} src="http://via.placeholder.com/150x150" alt="name 1" />
+        <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 1" />
         <br />
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at blandit ipsum, ac pretium lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -56,7 +56,7 @@ const About = () => (
       <Col xs={6} sm={6} md={6} lg={6}>
         <div style={style.container} >
         <h2 className="myheading"  style={style.heading}>Name 2</h2>
-        <img style={style.image} src="http://via.placeholder.com/150x150" alt="name 2" />
+        <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 2" />
         <br />
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at blandit ipsum, ac pretium lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

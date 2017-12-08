@@ -53,31 +53,31 @@ const SecondPage = () => (
     <div style={style.container}>
     <User
       username="Name 1"
-      avatar="http://via.placeholder.com/150x150"
+      avatar="https://via.placeholder.com/150x150"
       excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
 
     <User
       username="Name 2"
-      avatar="http://via.placeholder.com/150x150"
+      avatar="https://via.placeholder.com/150x150"
       excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
 
     <User
       username="Name 3"
-      avatar="http://via.placeholder.com/150x150"
+      avatar="https://via.placeholder.com/150x150"
       excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
 
     <User
       username="Name 4"
-      avatar="http://via.placeholder.com/150x150"
+      avatar="https://via.placeholder.com/150x150"
       excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
 
     <User
       username="Name 5"
-      avatar="http://via.placeholder.com/150x150"
+      avatar="https://via.placeholder.com/150x150"
       excerpt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ut dui vel malesuada. Duis ac massa arcu. Cras scelerisque ante est, sed tincidunt dui facilisis vitae. Vestibulum semper sem quis felis tempor, at ultrices turpis vehicula. Praesent ut dolor eleifend, elementum risus in, faucibus diam."
     />
 
