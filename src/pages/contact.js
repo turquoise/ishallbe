@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Link from 'gatsby-link';
-import GoogleMap from '../components/GoogleMap';
+import Iframe from 'react-iframe';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import Container from '../components/Container';
@@ -33,12 +33,16 @@ const style = {
   container: {
     marginTop: '20px',
     marginLeft: '20px',
+  },
   address: {
     marginTop: '100px',
-  }
-
-  }
-};
+  },
+  map: {
+    marginTop: '40px',
+    marginLeft: '60px',
+  },
+  
+}
 
 class Contact extends React.Component {
   constructor(props) {
@@ -168,7 +172,14 @@ class Contact extends React.Component {
           </ValidatorForm>
           </Col>
           <Col>
-           <GoogleMap />
+          <div style={style.map}>
+          <Iframe url="https://www.google.com/maps/embed/v1/place?key=AIzaSyC9Qf5Vq-yWq5WU4XcZ3cyYG-f2UtHP7OA&q=Bath+BA2+4DG&zoom=14"
+            width="400px"
+            height="400px"
+            display="initial"
+            position="relative" />
+            </div>
+          
           </Col>
           </Row>
           <Row>
