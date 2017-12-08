@@ -59,7 +59,7 @@ class ScriptsList extends React.Component {
     
   render() {
     const postList = this.getPostList();
-    console.log('scripts postList ', postList);
+    //console.log('scripts postList ', postList);
     return (
       <div>
         <Grid>

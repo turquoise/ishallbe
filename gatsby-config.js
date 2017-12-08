@@ -29,6 +29,19 @@ module.exports = {
     `gatsby-plugin-glamor`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-twitter`,
+    // {
+    //   resolve: `gatsby-source-twitter`,
+    //   options: {
+    //     q: `@wesbos`,
+    //     credentials: {
+    //       consumer_secret: "INSERT_HERE_YOUR_CONSUMER_KEY",
+    //       consumer_secret: "INSERT_HERE_YOUR_CONSUMER_SECRETE",
+    //       bearer_token: "INSERT_HERE_YOUR_BEARER_TOKEN",
+    //     },
+    //     tweet_mode: 'extended'
+    //   }
+    // }
   ],
 
 }

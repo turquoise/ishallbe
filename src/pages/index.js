@@ -61,7 +61,7 @@ class IndexPage extends React.Component {
     this.state = {
       category: 'all'
     }
-    console.log('this.props from index ', this.props);
+    //console.log('this.props from index ', this.props);
     
     
   }

@@ -59,7 +59,7 @@ class IndexList extends React.Component {
     
   render() {
     const postList = this.getPostList();
-    console.log('index postList ', postList);
+    //console.log('index postList ', postList);
     return (
       <div>
         <Grid>

@@ -59,7 +59,7 @@ class FilmingList extends React.Component {
     
   render() {
     const postList = this.getPostList();
-    console.log('filming postList ', postList);
+    //console.log('filming postList ', postList);
     return (
       <div>
         <Grid>

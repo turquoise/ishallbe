@@ -59,7 +59,7 @@ class LocationList extends React.Component {
     
   render() {
     const postList = this.getPostList();
-    console.log('location postList ', postList);
+    //console.log('location postList ', postList);
     return (
       <div>
         <Grid>
