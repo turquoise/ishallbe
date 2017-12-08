@@ -23,7 +23,7 @@ const TemplateWrapper = ({ children }) => (
   <MuiThemeProvider>
   <div style={mystyles.page}>
     <Helmet
-      title="Gatsby Default Starter"
+      title="I Shall Be"
       meta={[
         { name: 'description', content: 'EuroArt Media' },
         { name: 'keywords', content: "'Regina Jonas', 'I Shall Be'" },
