@@ -82,11 +82,7 @@ class IndexPage extends React.Component {
     const filmingEdges = this.props.data.filming.edges;
     const tagsEdges = this.props.data.tags.edges;
 
-    //if (this.state.tag !== '') {
-      //const tag = this.state.tag;
-      //console.log('tagsEdges ', tagsEdges);
-      //return <TagsList tagsEdges={tagsEdges} />
-    //}
+    
     
     if (this.state.category === 'all') {
       return <IndexList postEdges={postEdges} />
@@ -131,8 +127,8 @@ class IndexPage extends React.Component {
           </Paper>
           <br/>
           <div>
-            <h3>Tags</h3>
-            <Tags getData={this.getData} tagsEdges={postEdges}/>
+            {/*<h3>Tags</h3>
+            <Tags getData={this.getData} tagsEdges={postEdges}/>*/}
           </div>
           </Col>
         </Row>
