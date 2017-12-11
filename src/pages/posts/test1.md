@@ -3,6 +3,10 @@ title: "This is a test"
 date: "2017-11-30"
 author: "Test Author"
 category: "scripts"
+tags:
+- tag 1
+- tag 2
+- tag 3
 cover: "https://picsum.photos/300/200/?image=202"
 ---
 

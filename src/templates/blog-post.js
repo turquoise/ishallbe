@@ -26,7 +26,7 @@ const style = {
 
 export default class BlogPost extends React.Component {
   render() {
-    const { slug } = this.props.pathContext;
+    const { slug, prev, next } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -55,6 +55,20 @@ export default class BlogPost extends React.Component {
               <Col>
 
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            {/*<p>
+              { prev && (
+                <Link to={prev.fields.slug} >
+                  Previous: {prev.frontmatter.title}
+                </Link>
+              )}
+              </p>
+              <p>
+              { next && (
+                <Link to={next.fields.slug} >
+                  Next: {next.frontmatter.title}
+                </Link>
+              )}
+            </p>*/}
               
             <Link to="/">
               <FlatButton label="Back to Blog" fullWidth={true}/>

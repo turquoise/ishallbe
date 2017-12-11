@@ -35,6 +35,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       `)
       .then( result => {
         //console.log(JSON.stringify(result, null, 4))
+        // create forwards and back
+        // const posts = result.data.allMarkdownRemark.edges
+        // posts.forEach( ({node}, index) => {
+        //   createPage({
+        //     path: node.fields.slug,
+        //     component: path.resolve(`./src/templates/blog-post.js`),
+        //     context: {
+        //       prev: index === 0 ? null : posts[index - 1].node,
+        //       next: index === (posts.length - 1) ? null : posts[index + 1].node,
+        //     }
+        //   })
+        // })
+        // create slug
         result.data.allMarkdownRemark.edges.map( ({ node }) => {
           createPage({
             path: node.fields.slug,

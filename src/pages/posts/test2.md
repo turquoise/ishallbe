@@ -3,6 +3,10 @@ title: "This is another test"
 date: "2017-11-30"
 author: "Test Author"
 category: "filming"
+tags: 
+- tag 1
+- tag 4
+- tag 5
 cover: "https://picsum.photos/300/200/?image=54"
 ---
 

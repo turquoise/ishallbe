@@ -8,6 +8,8 @@ import IndexList from './indexlist';
 import LocationList from './locationlist';
 import FilmingList from './filminglist';
 import ScriptsList from './scriptslist';
+import TagsList from './tagslist';
+import Tags from './tags';
 import '../layouts/index.css';
 
 const style = {
@@ -59,10 +61,17 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: 'all'
+      category: 'all',
+      tag: ''
     }
-    //console.log('this.props from index ', this.props);
     
+  }
+
+  getData = (data) => {
+    this.setState({
+      category: 'all',
+      tag: data,
+    })
     
   }
 
@@ -71,25 +80,33 @@ class IndexPage extends React.Component {
     const locationEdges = this.props.data.location.edges;
     const scriptsEdges = this.props.data.scripts.edges;
     const filmingEdges = this.props.data.filming.edges;
+    const tagsEdges = this.props.data.tags.edges;
+
+    //if (this.state.tag !== '') {
+      //const tag = this.state.tag;
+      //console.log('tagsEdges ', tagsEdges);
+      //return <TagsList tagsEdges={tagsEdges} />
+    //}
     
     if (this.state.category === 'all') {
       return <IndexList postEdges={postEdges} />
-    } 
-    if (this.state.category === 'scripts') {
+    } else if (this.state.category === 'scripts' ) {
       return <ScriptsList scriptsEdges={scriptsEdges} />
-
-    }
-    if (this.state.category === 'location') {
+    } else if (this.state.category === 'location' ) {
       return <LocationList locationEdges={locationEdges} />
-    }
-    if (this.state.category === 'filming') {
+    } else if (this.state.category === 'filming' ) {
       return <FilmingList filmingEdges={filmingEdges} />
     }
+
   }
 
   render() {
     
-    //console.log('this.state', this.state.category);
+    const postEdges = this.props.data.posts.edges;
+    console.log('this.state.tag ', this.state.tag);
+    
+    //console.log('tagsEdges', tagsEdges);
+    
     return (
       <IndexContainer>
         <Grid>
@@ -106,12 +123,17 @@ class IndexPage extends React.Component {
           <Paper style={style.category} zDepth={1}>
           <h3 className="myheading" style={style.categorydiv}>Categories:</h3>
           <div style={style.categorydiv}>
-            <h5 onClick={ () => this.setState({ category: 'all'}) }>All</h5>
-            <h5 onClick={ () => this.setState({ category: 'scripts'}) }>Scripts</h5>
-            <h5 onClick={ () => this.setState({ category: 'location'}) }>Location</h5>
-            <h5 onClick={ () => this.setState({ category: 'filming'}) }>Filming</h5>
+            <h5 onClick={ () => this.setState({ category: 'all', tag: ''}) }>All</h5>
+            <h5 onClick={ () => this.setState({ category: 'scripts', tag: ''}) }>Scripts</h5>
+            <h5 onClick={ () => this.setState({ category: 'location', tag: ''}) }>Location</h5>
+            <h5 onClick={ () => this.setState({ category: 'filming', tag: ''}) }>Filming</h5>
             </div>
           </Paper>
+          <br/>
+          <div>
+            <h3>Tags</h3>
+            <Tags getData={this.getData} tagsEdges={postEdges}/>
+          </div>
           </Col>
         </Row>
         
@@ -122,7 +144,7 @@ class IndexPage extends React.Component {
 }
 
 export const query = graphql`
-query IndexQuery {
+query IndexQuery($tag: [String!]) {
   posts: allMarkdownRemark {
     totalCount
     edges {
@@ -132,7 +154,25 @@ query IndexQuery {
         frontmatter {
           title
           category
+          tags
           cover
+          date(formatString: "DD MMMM, YYYY")
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+  tags: allMarkdownRemark(filter: {frontmatter: {tags: {in: $tag}}}) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          category
+          tags
           date(formatString: "DD MMMM, YYYY")
         }
         fields {
