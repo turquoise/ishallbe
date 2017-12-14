@@ -24,12 +24,11 @@ const mystyles = {
   },
   a: {
     textDecoration: 'none',
-    color: 'black'
   },
   Link: {
     color: '#aa8956',
     fontSize: '70px',
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   text: {
     color: '#aa8956',
@@ -40,6 +39,18 @@ const mystyles = {
     width: '100%',
     height: 'auto'
   },
+  button: {
+    width: '250px',
+    height: '70px',
+    border: '2px solid #aa8956',
+    fontSize: '30px',
+    color: '#aa8956',
+    borderRadius: '40px',
+    paddingTop: '20px',
+    paddingLeft: '40px',
+    
+  },
+  
 
 
 }
@@ -49,7 +60,7 @@ const Header = () => (
     <div style={mystyles.main}>
     <Grid>
       <Row around="md" around="lg" >
-        <Col xs={12} sm={12} md={6} lg={6} >
+        <Col  xs={8}  sm={8} md={6} lg={6} >
         <div style={mystyles.heading}>
           <h1 className="myheading" >
             <Link to="/" style={mystyles.Link} >
@@ -58,7 +69,7 @@ const Header = () => (
           </h1>
           </div>
         </Col>
-        <Col xs={12} sm={12} md={4} lg={4}>
+        <Col xs={8}  sm={4} md={4} lg={4}>
           <div style={mystyles.img}>
           <a href="http://ravblog.ccarnet.org/2014/08/reflections-rabbiner-regina-jonas-mission/" target="_blank">
             <img width="380px" src={Regina} alt="Regina Jonas" />
@@ -71,6 +82,16 @@ const Header = () => (
             {/*<img width="200px" src={Paper} alt="Old Paper with a Pen"/>*/}
           </div>
         </Col>
+        </Row>
+        <Row >
+          <Col xsOffset={2} xs={8} smOffset={4} sm={8} mdOffset={4} md={8} lgOffset={4} lg={8}>
+          <br/><br/>
+          <Link to="/blog/" style={mystyles.a} >
+            <div style={mystyles.button} className="myheading">
+              Read the Blog
+            </div>
+            </Link>
+          </Col>
         </Row>
       </Grid>
     </div>
