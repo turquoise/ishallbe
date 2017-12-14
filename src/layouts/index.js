@@ -8,8 +8,8 @@ import './index.css';
 import Nav from './Nav';
 import Panel from './Panel';
 import FooterNav from './FooterNav';
-//import Header from './Header';
-//import FooterNav from './FooterNav';
+
+
 
 const mystyles = {
   page: {
@@ -33,7 +33,7 @@ const TemplateWrapper = ({ children }) => (
     <div
       style={{
         margin: '0 auto',
-        width: '100%',
+        maxWidth: '100%',
         padding: '0px',
         paddingTop: 0,
       }}

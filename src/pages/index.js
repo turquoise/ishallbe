@@ -10,7 +10,6 @@ import '../layouts/index.css';
 
 const style = {
   height: '100%',
-  width: '100%',
   paper: {
     height: 220,
     width: '100%',
