@@ -42,7 +42,7 @@ const About = () => (
       </Col>
     </Row>
     <Row>
-      <Col xs={6} sm={6} md={6} lg={6} >
+      <Col xs={12} sm={6} md={6} lg={6} >
         <div style={style.container}>
         <h2 className="myheading"   style={style.heading}>Name 1</h2>
         <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 1" />
@@ -53,7 +53,7 @@ const About = () => (
         
         </div>
       </Col>
-      <Col xs={6} sm={6} md={6} lg={6}>
+      <Col xs={12} sm={6} md={6} lg={6}>
         <div style={style.container} >
         <h2 className="myheading"  style={style.heading}>Name 2</h2>
         <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 2" />

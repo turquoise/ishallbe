@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 //import './assets/materialize/js/materialize';
 const styles = {
   footer: {
-    height: '80px',
+    height: '200px',
     margin: '0px',
     width: '100%',
   },

@@ -56,7 +56,7 @@ const style = {
 };
 
 
-class IndexPage2 extends React.Component {
+class Blog extends React.Component {
 
   constructor(props) {
     super(props);
@@ -97,10 +97,10 @@ class IndexPage2 extends React.Component {
 
   render() {
     
-    const postEdges = this.props.data.posts.edges;
+    //const postEdges = this.props.data.posts.edges;
     console.log('this.state.tag ', this.state.tag);
     
-    //console.log('tagsEdges', tagsEdges);
+    console.log('this.props', this.props);
     
     return (
       <IndexContainer>
@@ -108,13 +108,13 @@ class IndexPage2 extends React.Component {
         <h1 className="myheading" style={style.blog} >Blog</h1>
         {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
         <Row>
-          <Col xs={10} sm={10} md={10} lg={10}>
+          <Col xs={12} sm={12} md={10} lg={10}>
          
           {this.getPostList()}
            
 
           </Col>
-          <Col xs={2} sm={2} md={2} lg={2}>
+          <Col xs={12} sm={12} md={2} lg={2}>
           <Paper style={style.category} zDepth={1}>
           <h3 className="myheading" style={style.categorydiv}>Categories:</h3>
           <div style={style.categorydiv}>
@@ -139,7 +139,7 @@ class IndexPage2 extends React.Component {
 }
 
 export const query = graphql`
-query IndexQuery2($tag: [String!]) {
+query IndexQuery($tag: [String!]) {
   posts: allMarkdownRemark {
     totalCount
     edges {
@@ -237,4 +237,4 @@ query IndexQuery2($tag: [String!]) {
 `
 
 
-export default IndexPage2
+export default Blog

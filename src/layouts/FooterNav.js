@@ -7,7 +7,8 @@ const styles = {
     padding: '20px'
   },
   footer: {
-    padding: '20px'
+    padding: '20px',
+    marginTop: '100px',
   },
 
 }

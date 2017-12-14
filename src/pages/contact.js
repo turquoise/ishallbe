@@ -39,7 +39,6 @@ const style = {
   },
   map: {
     marginTop: '40px',
-    marginLeft: '60px',
   },
   
 }
@@ -109,7 +108,7 @@ class Contact extends React.Component {
       <Paper style={style} zDepth={1}>
       <Grid>
         <Row>
-        <Col>
+        <Col xs={12} sm={12} md={5} lg={5}>
 
         <h1 className="myheading"  style={style.container}>Contact EuroArt</h1>
         <ValidatorForm style={style.container}
@@ -171,11 +170,11 @@ class Contact extends React.Component {
               />
           </ValidatorForm>
           </Col>
-          <Col>
+          <Col xs={12} sm={12} md={7} lg={7}>
           <div style={style.map}>
           <Iframe url="https://www.google.com/maps/embed/v1/place?key=AIzaSyC9Qf5Vq-yWq5WU4XcZ3cyYG-f2UtHP7OA&q=Bath+BA2+4DG&zoom=14"
-            width="400px"
-            height="400px"
+            width="380px"
+            height="380px"
             display="initial"
             position="relative" />
             </div>

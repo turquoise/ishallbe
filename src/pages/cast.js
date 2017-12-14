@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Container from '../components/Container';
 import Paper from 'material-ui/Paper';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import '../layouts/index.css';
 //import styles from './pages.css';
 
@@ -30,19 +31,27 @@ const User = props =>
     "&:last-child": { marginBottom: 0 }
   }}
 >
-  <img
-    src={props.avatar}
-    css={{ flex: `0 0 96px`, width: 96, height: 96, margin: 0 }}
-    alt=""
-  />
-  <div css={{ flex: 1, marginLeft: 18, padding: 12 }}>
-    <h2 className="myheading"  css={{ margin: `0 0 12px 0`, padding: 0 }}>
-      {props.username}
-    </h2>
-    <p css={{ margin: 0 }}>
-      {props.excerpt}
-    </p>
-  </div>
+<Grid>
+  <Row>
+    <Col xs={12} sm={2} md={2} lg={2}>
+    <img
+      src={props.avatar}
+      css={{ flex: `0 0 96px`, width: 96, height: 96, margin: 0 }}
+      alt=""
+    />
+    </Col>
+    <Col xs={12} sm={10} md={10} lg={10}>
+        <div css={{ flex: 1, marginLeft: 8, padding: 2 }}>
+        <h2 className="myheading"  css={{ margin: `0 0 12px 0`, padding: 0 }}>
+          {props.username}
+        </h2>
+        <p css={{ margin: 0 }}>
+          {props.excerpt}
+        </p>
+      </div>
+      </Col>
+    </Row>
+  </Grid>
 </div>
 
 
