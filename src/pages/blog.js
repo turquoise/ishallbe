@@ -19,15 +19,15 @@ const style = {
     marginTop: '2px',
     textAlign: 'center',
     display: 'inline-block',
-    backgroundColor: '#e5d7b2',
+    backgroundColor: 'white',
   },
   category: {
     width: '100%',
     marginTop: '2px',
     textAlign: 'left',
     display: 'inline-block',
-    backgroundColor: 'black',
-    color: '#aa8956',
+    backgroundColor: '#475b75',
+    color: 'white',
   },
   categorydiv: {
     marginTop: '10px',
@@ -115,8 +115,8 @@ class Blog extends React.Component {
 
           </Col>
           <Col xs={12} sm={12} md={2} lg={2}>
-          <Paper style={style.category} zDepth={1}>
-          <h3 className="myheading" style={style.categorydiv}>Categories:</h3>
+          <Paper style={style.category} zDepth={4}>
+          <h4 className="myheading" style={style.categorydiv}>Categories:</h4>
           <div style={style.categorydiv}>
             <h5 onClick={ () => this.setState({ category: 'all', tag: ''}) }>All</h5>
             <h5 onClick={ () => this.setState({ category: 'scripts', tag: ''}) }>Scripts</h5>

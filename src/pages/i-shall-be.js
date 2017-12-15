@@ -10,7 +10,7 @@ const style = {
   margin: 5,
   textAlign: 'left',
   display: 'inline-block',
-  backgroundColor: '#e5d7b2',
+  backgroundColor: 'white',
   container: {
     marginTop: '20px',
     marginLeft: '30px',
@@ -22,7 +22,7 @@ const style = {
 
 const IShallBe = () => (
   <Container>
-    <Paper style={style} zDepth={1}>
+    <Paper style={style} zDepth={4}>
     <h1 className="myheading"  style={style.container}>About I Shall Be</h1>
     <div style={style.container}>
       <p>

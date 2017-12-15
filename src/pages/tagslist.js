@@ -11,7 +11,7 @@ const style = {
     marginTop: '5px',
     textAlign: 'center',
     display: 'inline-block',
-    backgroundColor: '#e5d7b2',
+    backgroundColor: 'white',
   },
   text: {
     textAlign: 'left',

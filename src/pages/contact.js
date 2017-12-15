@@ -29,7 +29,7 @@ const style = {
   margin: 5,
   textAlign: 'left',
   display: 'inline-block',
-  backgroundColor: '#e5d7b2',
+  backgroundColor: 'white',
   container: {
     marginTop: '20px',
     marginLeft: '20px',
@@ -105,7 +105,7 @@ class Contact extends React.Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
       <Container>
-      <Paper style={style} zDepth={1}>
+      <Paper style={style} zDepth={4}>
       <Grid>
         <Row>
         <Col xs={12} sm={12} md={5} lg={5}>
