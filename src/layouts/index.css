@@ -640,7 +640,7 @@ pre tt:after {
       rgba(40, 60, 90, 0.8)), 
   url('./assets/images/regina.png');
   background-size: cover;
-  background-position: top;
+  background-position: left;
   position: relative;
   color: white;
   height: 100%;
