@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Paper from 'material-ui/Paper';
 import Container from '../components/Container';
+import Gradient from '../layouts/Gradient';
 import '../layouts/index.css';
 
 const style = {
@@ -21,6 +22,8 @@ const style = {
 
 
 const IShallBe = () => (
+  <div>
+    <Gradient />
   <Container>
     <Paper style={style} zDepth={4}>
     <h1 className="myheading"  style={style.container}>About I Shall Be</h1>
@@ -32,6 +35,7 @@ const IShallBe = () => (
     
     </Paper>
   </Container>
+  </div>
 )
 
 export default IShallBe

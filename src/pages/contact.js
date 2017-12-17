@@ -12,6 +12,7 @@ import { TextValidator} from 'react-material-ui-form-validator';
 import {brown500, grey900} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Gradient from '../layouts/Gradient';
 import '../layouts/index.css';
 
 const muiTheme = getMuiTheme({
@@ -103,6 +104,8 @@ class Contact extends React.Component {
   render() {
     const { formData, submitted } = this.state;
     return (
+      <div>
+        <Gradient />
       <MuiThemeProvider muiTheme={muiTheme}>
       <Container>
       <Paper style={style} zDepth={4}>
@@ -202,6 +205,7 @@ class Contact extends React.Component {
         </Paper>
       </Container>
       </MuiThemeProvider>
+      </div>
 
     )
   }

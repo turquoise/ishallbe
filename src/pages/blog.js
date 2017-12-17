@@ -10,6 +10,7 @@ import FilmingList from './filminglist';
 import ScriptsList from './scriptslist';
 import TagsList from './tagslist';
 import Tags from './tags';
+import Gradient from '../layouts/Gradient';
 import '../layouts/index.css';
 
 const style = {
@@ -103,8 +104,12 @@ class Blog extends React.Component {
     console.log('this.props', this.props);
     
     return (
+      <div>
+      <Gradient />
       <IndexContainer>
+        
         <Grid>
+        
         <h1 className="myheading" style={style.blog} >Blog</h1>
         {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
         <Row>
@@ -134,6 +139,7 @@ class Blog extends React.Component {
         
         </Grid>
       </IndexContainer>
+      </div>
     )
   }
 }

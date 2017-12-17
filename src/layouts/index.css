@@ -647,6 +647,13 @@ pre tt:after {
   width: auto;
 }
 
+.gradient-top {
+  height: 50px;
+  width: 100%;
+  background: #96a1b0;
+  background: linear-gradient(#96a1b0, white);
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

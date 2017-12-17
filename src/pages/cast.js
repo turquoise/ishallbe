@@ -4,6 +4,7 @@ import Container from '../components/Container';
 import Paper from 'material-ui/Paper';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import '../layouts/index.css';
+import Gradient from '../layouts/Gradient';
 //import styles from './pages.css';
 
 const style = {
@@ -56,6 +57,8 @@ const User = props =>
 
 
 const SecondPage = () => (
+  <div>
+    <Gradient />
   <Container>
     <Paper style={style} zDepth={4}>
     <h1 className="myheading" style={style.container} >Film Cast</h1>
@@ -94,6 +97,7 @@ const SecondPage = () => (
 
     </Paper>
   </Container>
+  </div>
 )
 
 export default SecondPage
