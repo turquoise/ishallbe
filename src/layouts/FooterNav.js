@@ -8,7 +8,10 @@ const styles = {
   },
   footer: {
     padding: '20px',
-    marginTop: '100px',
+    marginTop: '50px',
+    height: '100px',
+    color: 'white',
+    background: '#43556e'
   },
 
 }
@@ -17,11 +20,6 @@ class FooterNav extends React.Component {
   render() {
     return (
       <div>
-        <div style={styles.content}>
-        
-
-        </div>
-
         <footer style={styles.footer}>
         Copyright 2018 EuroArt Media Ltd
         </footer>

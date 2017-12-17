@@ -86,9 +86,6 @@ class Nav extends React.Component {
             <Link style={styles.a}  to="/blog/">Blog</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
-            <Link style={styles.a} to="/i-shall-be/">About I Shall Be</Link>
-          </MenuItem>
-          <MenuItem onClick={this.handleClose}>
             <Link style={styles.a} to="/cast/">Film Cast</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>

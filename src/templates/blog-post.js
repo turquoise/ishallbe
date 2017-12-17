@@ -6,6 +6,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
 import config from '../../data/SiteConfig';
 import Disqus from '../components/Disqus';
+import Gradient from '../layouts/Gradient';
 import '../layouts/index.css';
 
 const style = {
@@ -37,6 +38,8 @@ export default class BlogPost extends React.Component {
     }
 
     return (
+      <div>
+        <Gradient />
       <Container>
         <Paper style={style} zDepth={4}>
           <div style={style.container}>
@@ -86,6 +89,7 @@ export default class BlogPost extends React.Component {
 
         </Paper>
       </Container>
+      </div>
     )
   }
 

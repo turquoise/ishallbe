@@ -5,6 +5,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import Header from '../layouts/Header';
+import IShallBe from './i-shall-be';
 
 import '../layouts/index.css';
 
@@ -65,6 +66,7 @@ class IndexPage extends React.Component {
     return (
       <div style={style}>
           <Header />
+          <IShallBe />
           
       </div>
     )
