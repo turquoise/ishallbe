@@ -26,11 +26,17 @@ const IShallBe = () => (
     <Gradient />
   <Container>
     <Paper style={style} zDepth={4}>
-    <h1 className="myheading"  style={style.container}>About I Shall Be</h1>
+    <h1 className="myheading"  style={style.container}>Synopsis of I Shall Be</h1>
     <div style={style.container}>
       <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at blandit ipsum, ac pretium lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent leo orci, efficitur a ex in, sollicitudin luctus odio. Pellentesque eget nulla massa. Pellentesque finibus varius blandit. Aenean ornare augue eu orci ultrices luctus. Sed luctus mi dui, et sagittis dui porttitor non. In congue sed orci ut tincidunt. Fusce arcu augue, iaculis eu sollicitudin nec, vestibulum at nulla. Aenean nec ultricies justo. Phasellus sed lacinia risus. Proin tincidunt facilisis urna, sit amet semper tellus tempor mattis. Curabitur ut luctus libero, id lacinia justo. Integer eget ipsum sit amet lorem pretium dignissim vitae vel justo. Aenean tristique ante eu augue dictum, sit amet rhoncus nisl consequat. Duis ac sodales nisi, molestie placerat elit.
-        </p>
+      Regina came from a poor family, she grew up in one of the worst slums in Berlin but her intelligence and desire drove her to challenge tradition, to question why a woman could not be equal to man, to achieve what was believed to be impossible. The film follows Regina's struggle to be ordained as a Rabbi during the early to mid 1930s. Her quest to be ordained is set against the context of the rise of the Nazi party and the destruction of Weimar Germany. This adds a dark undercurrent to the story but also makes it equally enthralling. The viewer bears witness as Regina battles within her own community to be accepted for ordination, overcoming sexism and snobbery based on her gender and her upbringing. Regina also has a second battle to fight as she has to deal with the growing anti-Semitic prejudice within broader German society that will ultimately destroy her community. As Berlin's Jews are harassed and driven closer to the edge none of our central characters fully realise the danger that is enveloping them. The characters go about their lives, hoping that things will get better, that the madness will just go away. Only the audience is aware of the gathering storm and they hope against hope that Regina will survive.  
+      </p>
+      <p>
+      Regina herself is smart enough to see what is happening but she is no different then so many of her fellow German's, so focused is she on achieving her goals, she fails to realise the danger until it is too late.    
+      </p>
+      <p>
+      The film culminates with Regina Jonas being ordained as a rabbi against the odds, just as she triumphs the world she knows falls apart as Germany's Jews are driven by the Nazis to the brink of complete annihilation. This film does not pull any punches, it shows that even in moments of triumph our world can come crashing down.
+      </p>
     </div>
     
     </Paper>
