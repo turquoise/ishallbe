@@ -4,6 +4,8 @@ import Paper from 'material-ui/Paper';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Container from '../components/Container';
 import Gradient from '../layouts/Gradient';
+import Trisha1 from  '../layouts/assets/images/trisha1.jpg';
+import Trisha2 from  '../layouts/assets/images/trisha2.jpg';
 import '../layouts/index.css';
 
 const style = {
@@ -24,6 +26,8 @@ const style = {
   image: {
     display: 'block',
     margin: '0 auto',
+    height: 'auto',
+    width: '400px'
   }
 };
 
@@ -45,10 +49,10 @@ const About = () => (
       </Col>
     </Row>
     <Row>
-      <Col xs={12} sm={6} md={6} lg={6} >
+      <Col xs={12} sm={12} md={12} lg={12} >
         <div style={style.container}>
         <h2 className="myheading"   style={style.heading}>Trisha Clarke</h2>
-        <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 1" />
+        <img style={style.image} src={Trisha1} alt="Trisha Clarke" />
         <br />
         <p>
         After leaving school Trisha Clarke began dancing with The Royal Ballet Company and then moved onto study to become an actress at Studio 68.  Trisha has undertaken acting roles in film, television and theatre. She is a founder member of the London Translation and Interpreting Agency and speaks English, French, Italian, Russian and German. After obtaining a BA in Fine Art at Central St Martin’s she went onto study on a BBC News Course in Television Journalism. 
@@ -71,7 +75,7 @@ const About = () => (
         
         </div>
       </Col>
-      <Col xs={12} sm={6} md={6} lg={6}>
+      <Col xs={12} sm={12} md={12} lg={12}>
         <div style={style.container} >
         <h2 className="myheading"  style={style.heading}>Natasha</h2>
         <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 2" />
