@@ -67,7 +67,7 @@ class Nav extends React.Component {
             onClick={this.handleToggle}
           />}
           iconElementRight={
-            <Link to="/about/">
+            <Link to="/">
               <img style={styles.img} src={logo} alt="Logo" />
             </Link>
           }
@@ -85,9 +85,9 @@ class Nav extends React.Component {
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/blog/">Blog</Link>
           </MenuItem>
-          <MenuItem onClick={this.handleClose}>
+          {/*<MenuItem onClick={this.handleClose}>
             <Link style={styles.a} to="/cast/">Film Cast</Link>
-          </MenuItem>
+          </MenuItem>*/}
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/about/">About EuroArt</Link>
           </MenuItem>
