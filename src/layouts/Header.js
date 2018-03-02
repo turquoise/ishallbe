@@ -58,18 +58,21 @@ const Header = () => (
       <Row around="md" around="lg" >
         <Col  xs={12}  sm={12} mdOffset={4} md={8} lgOffset={6} lg={6} >
         <div style={mystyles.heading}>
-          <h1 className="myheading" >
-            <Link to="/" style={mystyles.Link} >
-              I Shall Be
-            </Link>
+          <h1 className="myheading" >  
+              EuroArt (Media) Ltd
           </h1>
+          <p>
+          Euroart (Media) Ltd is an independent television and film production company based in Bath making branded television content and popular films for an avid audience. 
+          </p>
+          <p>
+          At present the company are in pre-production on a feature film called ‘ I Shall Be’  about the life of Regina Jonas, the first female rabbi who was ordained in 1936 in Offenbach, Germany.
+          </p>
           </div>
         </Col>
         </Row>
         <Row>
         <Col xs={12} sm={12} mdOffset={4} md={8} lgOffset={6} lg={6}>
           <div style={mystyles.text} >
-            <h3 className="myheading" >Regina Jonas (1902-1944)</h3>
             {/*<img width="200px" src={Paper} alt="Old Paper with a Pen"/>*/}
           </div>
         </Col>

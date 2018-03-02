@@ -29,7 +29,16 @@ const IShallBe = () => (
     <h1 className="myheading"  style={style.container}>Synopsis of I Shall Be</h1>
     <div style={style.container}>
       <p>
-      Regina came from a poor family, she grew up in one of the worst slums in Berlin but her intelligence and desire drove her to challenge tradition, to question why a woman could not be equal to man, to achieve what was believed to be impossible. The film follows Regina's struggle to be ordained as a Rabbi during the early to mid 1930s. Her quest to be ordained is set against the context of the rise of the Nazi party and the destruction of Weimar Germany. This adds a dark undercurrent to the story but also makes it equally enthralling. The viewer bears witness as Regina battles within her own community to be accepted for ordination, overcoming sexism and snobbery based on her gender and her upbringing. Regina also has a second battle to fight as she has to deal with the growing anti-Semitic prejudice within broader German society that will ultimately destroy her community. As Berlin's Jews are harassed and driven closer to the edge none of our central characters fully realise the danger that is enveloping them. The characters go about their lives, hoping that things will get better, that the madness will just go away. Only the audience is aware of the gathering storm and they hope against hope that Regina will survive.  
+      Regina came from a poor family, she grew up in one of the worst slums in Berlin but her intelligence and desire drove her to challenge tradition, to question why a woman could not be equal to man, to achieve what was believed to be impossible. 
+      </p>
+      <p>
+      The film follows Regina's struggle to be ordained as a Rabbi during the early to mid 1930s. Her quest to be ordained is set against the context of the rise of the Nazi party and the destruction of Weimar Germany. This adds a dark undercurrent to the story but also makes it equally enthralling. 
+      </p>
+      <p>
+      The viewer bears witness as Regina battles within her own community to be accepted for ordination, overcoming sexism and snobbery based on her gender and her upbringing. Regina also has a second battle to fight as she has to deal with the growing anti-Semitic prejudice within broader German society that will ultimately destroy her community. 
+      </p>
+      <p>
+      As Berlin's Jews are harassed and driven closer to the edge none of our central characters fully realise the danger that is enveloping them. The characters go about their lives, hoping that things will get better, that the madness will just go away. Only the audience is aware of the gathering storm and they hope against hope that Regina will survive.  
       </p>
       <p>
       Regina herself is smart enough to see what is happening but she is no different then so many of her fellow German's, so focused is she on achieving her goals, she fails to realise the danger until it is too late.    
