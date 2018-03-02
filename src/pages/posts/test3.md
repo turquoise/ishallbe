@@ -1,7 +1,7 @@
 ---
-title: "This is one more test"
-date: "2017-11-30"
-author: "Test Author"
+title: "Tricia Clarke"
+date: "2018-03-01"
+author: "Tricia Clarke"
 category: "location"
 tags:
 - tag 2

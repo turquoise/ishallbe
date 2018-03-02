@@ -1,13 +1,13 @@
 ---
-title: "This is another test"
-date: "2017-11-30"
-author: "Test Author"
+title: "Tricia Clarke"
+date: "2018-03-01"
+author: "Tricia Clarke"
 category: "filming"
-tags: 
+tags:
 - tag 1
 - tag 4
 - tag 5
-cover: "https://picsum.photos/300/200/?image=54"
+cover: "https://picsum.photos/300/200/?image=486"
 ---
 
 # Heading 1 Filming
