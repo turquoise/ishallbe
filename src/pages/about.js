@@ -34,7 +34,7 @@ const style = {
 
 const About = () => (
   <div>
-    <Gradient />
+    {/*<Gradient />*/}
   <Container>
     <Paper style={style} zDepth={4}>
     <Grid>
@@ -55,13 +55,13 @@ const About = () => (
         <img style={style.image} src={Trisha1} alt="Trisha Clarke" />
         <br />
         <p>
-        After leaving school Trisha Clarke began dancing with The Royal Ballet Company and then moved onto study to become an actress at Studio 68.  Trisha has undertaken acting roles in film, television and theatre. She is a founder member of the London Translation and Interpreting Agency and speaks English, French, Italian, Russian and German. After obtaining a BA in Fine Art at Central St Martin’s she went onto study on a BBC News Course in Television Journalism. 
+        After leaving school Trisha Clarke began dancing with The Royal Ballet Company and then moved onto study to become an actress at Studio 68.  Trisha has undertaken acting roles in film, television and theatre. She is a founder member of the London Translation and Interpreting Agency and speaks English, French, Italian, Russian and German. After obtaining a BA in Fine Art at Central St Martin’s she went onto study on a BBC News Course in Television Journalism.
         </p>
         <p>
-        Trisha studied for a Post graduate MA in Media Production at the University of Strathclyde. Whilst there she also undertook a Script editing Course run by Scottish Screen in Glasgow.  Continuing with her work as a script editor she trained as a script mentor at FAMU in Prague. Trisha has enjoyed work as a director directing mainly documentary films which include: “Responses”; “Markus Wolfe - In From The Cold” and “The Vital Link”. 
+        Trisha studied for a Post graduate MA in Media Production at the University of Strathclyde. Whilst there she also undertook a Script editing Course run by Scottish Screen in Glasgow.  Continuing with her work as a script editor she trained as a script mentor at FAMU in Prague. Trisha has enjoyed work as a director directing mainly documentary films which include: “Responses”; “Markus Wolfe - In From The Cold” and “The Vital Link”.
         </p>
         <p>
-        Alongside her production work Trisha has also exhibited her paintings internationally. Her art work was chosen to exhibit in The Tate in St Ives along with Tacita Dean and in 2013 she collaborated on an installation project with Susanna Lacey at The Tate Modern, London. 
+        Alongside her production work Trisha has also exhibited her paintings internationally. Her art work was chosen to exhibit in The Tate in St Ives along with Tacita Dean and in 2013 she collaborated on an installation project with Susanna Lacey at The Tate Modern, London.
         </p>
         <p>
         Trisha Clarke is currently working as a producer and her current projects include” I Shall Be”, “Teddy Tales “, “The Impotence Of Power” and “Hilde”.
@@ -69,13 +69,13 @@ const About = () => (
         <p>
         Trisha Clarke enjoys going to the theatre, watching films old and new and eating out in restaurants.
         </p>
-        <p> 
+        <p>
         Trisha also enjoys swimming and travelling.
         </p>
-        
+
         </div>
       </Col>
-      <Col xs={12} sm={12} md={12} lg={12}>
+      {/*<Col xs={12} sm={12} md={12} lg={12}>
         <div style={style.container} >
         <h2 className="myheading"  style={style.heading}>Natasha</h2>
         <img style={style.image} src="https://via.placeholder.com/150x150" alt="name 2" />
@@ -83,12 +83,12 @@ const About = () => (
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at blandit ipsum, ac pretium lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
-       
+
         </div>
-      </Col>
+      </Col>*/}
     </Row>
     </Grid>
-    
+
     </Paper>
   </Container>
   </div>

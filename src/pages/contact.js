@@ -41,7 +41,7 @@ const style = {
   map: {
     marginTop: '40px',
   },
-  
+
 }
 
 class Contact extends React.Component {
@@ -98,14 +98,14 @@ class Contact extends React.Component {
           console.log(error);
           form.reset();
         })
-        
+
     }
 
   render() {
     const { formData, submitted } = this.state;
     return (
       <div>
-        <Gradient />
+        {/*<Gradient />*/}
       <MuiThemeProvider muiTheme={muiTheme}>
       <Container>
       <Paper style={style} zDepth={4}>
@@ -181,7 +181,7 @@ class Contact extends React.Component {
             display="initial"
             position="relative" />
             </div>
-          
+
           </Col>
           </Row>
           <Row>
@@ -191,7 +191,7 @@ class Contact extends React.Component {
                 <p>Pultney Road</p>
                 <p>Bath, BA2 4DG</p>
               </div>
-              
+
             </Col>
             <Col  xs={6} sm={6} md={6} lg={6} >
               <div  >

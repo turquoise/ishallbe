@@ -6,6 +6,8 @@ import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 import Header from '../layouts/Header';
 import IShallBe from './i-shall-be';
+import Contact from './contact';
+import About from './about';
 
 import '../layouts/index.css';
 
@@ -62,12 +64,14 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    
+
     return (
       <div style={style}>
           <Header />
           <IShallBe />
-          
+          <About />
+          <Contact />
+
       </div>
     )
   }

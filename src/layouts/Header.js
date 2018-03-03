@@ -16,7 +16,7 @@ const mystyles = {
   },
   heading: {
     marginLeft: '20px',
-    marginTop: '20px',
+    marginTop: '80px',
   },
   a: {
     textDecoration: 'none',
@@ -44,9 +44,9 @@ const mystyles = {
     borderRadius: '40px',
     paddingTop: '15px',
     paddingLeft: '20px',
-    
+
   },
-  
+
 
 
 }
@@ -58,11 +58,11 @@ const Header = () => (
       <Row around="md" around="lg" >
         <Col  xs={12}  sm={12} mdOffset={4} md={8} lgOffset={6} lg={6} >
         <div style={mystyles.heading}>
-          <h1 className="myheading" >  
+          <h1 className="myheading" >
               EuroArt (Media) Ltd
           </h1>
           <p>
-          Euroart (Media) Ltd is an independent television and film production company based in Bath making branded television content and popular films for an avid audience. 
+          Euroart (Media) Ltd is an independent television and film production company based in Bath making branded television content and popular films for an avid audience.
           </p>
           <p>
           At present the company are in pre-production on a feature film called ‘ I Shall Be’  about the life of Regina Jonas, the first female rabbi who was ordained in 1936 in Offenbach, Germany.

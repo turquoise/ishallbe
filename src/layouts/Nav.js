@@ -25,7 +25,7 @@ const styles = {
     textDecoration: 'none',
     color: 'black'
   },
-  
+
 }
 
 const muiTheme = getMuiTheme({
@@ -88,13 +88,13 @@ class Nav extends React.Component {
           {/*<MenuItem onClick={this.handleClose}>
             <Link style={styles.a} to="/cast/">Film Cast</Link>
           </MenuItem>*/}
-          <MenuItem onClick={this.handleClose}>
+          {/*<MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/about/">About EuroArt</Link>
           </MenuItem>
           <MenuItem onClick={this.handleClose}>
             <Link style={styles.a}  to="/contact/">Contact EuroArt</Link>
-          </MenuItem>
-          
+          </MenuItem>*/}
+
 
         </Drawer>
       </div>
