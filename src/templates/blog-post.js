@@ -74,7 +74,7 @@ export default class BlogPost extends React.Component {
               )}
             </p>*/}
 
-            <Link to="/">
+            <Link to="/blog">
               <FlatButton label="Back to Blog" fullWidth={true}/>
             </Link>
             <Disqus postNode={postNode} />
