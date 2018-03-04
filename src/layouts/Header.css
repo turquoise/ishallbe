@@ -1,0 +1,31 @@
+
+.myheading {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+  width: 200px;
+  display: inline-block;
+  height: 60px;
+  border: 2px solid white;
+  font-size: 20px;
+  color: white;
+  border-radius: 40px;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-weight: normal;
+  vertical-align: middle;
+  transition: all 0.8s;
+  opacity: 1;
+}
+
+.button:hover,
+.button:active {
+  background-color: white;
+  color: #547196;
+  font-weight: normal;
+  transform: scaleX(1.2) scaleY(1.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  opacity: 0.5;
+
+}

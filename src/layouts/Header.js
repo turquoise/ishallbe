@@ -6,7 +6,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid'
 import FlatButton from 'material-ui/FlatButton';
 import Regina from  './assets/images/reginajonas2.png';
 //import Paper from './assets/images/paper.png';
-import './index.css';
+import './Header.css';
 
 const mystyles = {
   main: {
@@ -44,7 +44,6 @@ const mystyles = {
     borderRadius: '40px',
     paddingTop: '15px',
     paddingLeft: '20px',
-
   },
 
 
@@ -80,8 +79,8 @@ const Header = () => (
         <Row >
           <Col xs={12} smOffset={4} sm={8} mdOffset={6} md={6} lgOffset={7} lg={5}>
           <br/><br/>
-          <Link to="/blog/" style={mystyles.a} >
-            <div style={mystyles.button} className="myheading">
+          <Link to="/blog/"  style={mystyles.a}>
+            <div  className="button">
               Read the Blog
             </div>
             </Link>
