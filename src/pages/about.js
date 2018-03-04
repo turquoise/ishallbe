@@ -5,7 +5,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import Container from '../components/Container';
 import Gradient from '../layouts/Gradient';
 import Trisha1 from  '../layouts/assets/images/trisha1.jpg';
-import Trisha2 from  '../layouts/assets/images/trisha2.jpg';
 import '../layouts/index.css';
 
 const style = {
