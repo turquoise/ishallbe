@@ -65,7 +65,7 @@ class Blog extends React.Component {
       category: 'all',
       tag: ''
     }
-    
+
   }
 
   getData = (data) => {
@@ -73,7 +73,7 @@ class Blog extends React.Component {
       category: 'all',
       tag: data,
     })
-    
+
   }
 
   getPostList = () => {
@@ -83,7 +83,7 @@ class Blog extends React.Component {
     const filmingEdges = this.props.data.filming.edges;
     const tagsEdges = this.props.data.tags.edges;
 
-    
+
     if (this.state.category === 'all') {
       return <IndexList postEdges={postEdges} />
     } else if (this.state.category === 'scripts' ) {
@@ -97,26 +97,26 @@ class Blog extends React.Component {
   }
 
   render() {
-    
+
     //const postEdges = this.props.data.posts.edges;
     console.log('this.state.tag ', this.state.tag);
-    
+
     console.log('this.props', this.props);
-    
+
     return (
       <div>
       <Gradient />
       <IndexContainer>
-        
+
         <Grid>
-        
+
         <h1 className="myheading" style={style.blog} >Blog</h1>
         {/*<h4>{data.allMarkdownRemark.totalCount} Posts</h4>*/}
         <Row>
           <Col xs={12} sm={12} md={10} lg={10}>
-         
+
           {this.getPostList()}
-           
+
 
           </Col>
           <Col xs={12} sm={12} md={2} lg={2}>
@@ -136,7 +136,7 @@ class Blog extends React.Component {
           </div>
           </Col>
         </Row>
-        
+
         </Grid>
       </IndexContainer>
       </div>
@@ -156,7 +156,13 @@ query IndexQuery($tag: [String!]) {
           title
           category
           tags
-          cover
+          cover {
+            childImageSharp {
+              sizes(maxWidth: 630) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
           date(formatString: "DD MMMM, YYYY")
         }
         fields {
@@ -173,6 +179,13 @@ query IndexQuery($tag: [String!]) {
         frontmatter {
           title
           category
+          cover {
+            childImageSharp {
+              sizes(maxWidth: 630) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
           tags
           date(formatString: "DD MMMM, YYYY")
         }
@@ -190,7 +203,13 @@ query IndexQuery($tag: [String!]) {
         excerpt
         frontmatter {
           title
-          cover
+          cover {
+            childImageSharp {
+              sizes(maxWidth: 630) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
           category
           date(formatString: "DD MMMM, YYYY")
         }
@@ -209,7 +228,13 @@ query IndexQuery($tag: [String!]) {
         excerpt
         frontmatter {
           title
-          cover
+          cover {
+            childImageSharp {
+              sizes(maxWidth: 630) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
           category
           date(formatString: "DD MMMM, YYYY")
         }
@@ -228,7 +253,13 @@ query IndexQuery($tag: [String!]) {
         excerpt
         frontmatter {
           title
-          cover
+          cover {
+            childImageSharp {
+              sizes(maxWidth: 630) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
           category
           date(formatString: "DD MMMM, YYYY")
         }

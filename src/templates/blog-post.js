@@ -8,6 +8,7 @@ import config from '../../data/SiteConfig';
 import Disqus from '../components/Disqus';
 import Gradient from '../layouts/Gradient';
 import '../layouts/index.css';
+import Img from 'gatsby-image';
 
 const style = {
   height: '100%',
@@ -51,7 +52,7 @@ export default class BlogPost extends React.Component {
                   <p className="myheading">Date: {post.date}</p>
                 </Col>
                 <Col xs={12} sm={8} md={6} lg={6}>
-                  <img src={post.cover} />
+                  <Img sizes={post.cover.childImageSharp.sizes} />
                 </Col>
               </Row>
               <Row>
@@ -72,7 +73,7 @@ export default class BlogPost extends React.Component {
                 </Link>
               )}
             </p>*/}
-              
+
             <Link to="/">
               <FlatButton label="Back to Blog" fullWidth={true}/>
             </Link>
@@ -83,7 +84,7 @@ export default class BlogPost extends React.Component {
 
 
             </Grid>
-            
+
 
           </div>
 
@@ -102,7 +103,13 @@ export const query = graphql`
       html
       frontmatter {
         title
-        cover
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         author
         date
       }
@@ -112,4 +119,3 @@ export const query = graphql`
     }
   }
 `
-

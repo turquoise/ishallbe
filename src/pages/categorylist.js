@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Paper from 'material-ui/Paper';
 import FlatButton from 'material-ui/FlatButton';
+import Img from 'gatsby-image';
 
 const style = {
   paper: {
@@ -52,31 +53,31 @@ class CategoryList extends React.Component {
         });
       });
     }
-    
+
     return postList;
   }
 
-    
+
   render() {
     const postList = this.getPostList();
     //console.log('filming postList ', postList);
     return (
       <div>
         <Grid>
-          
-        { 
-            
+
+        {
+
           postList.map( (post, index) => (
-            
+
 
             <div key={index} >
             <Paper style={style.paper} zDepth={4}>
             <Row>
-            
-            
+
+
                   <Col xs={4} sm={4} md={4} lg={4}>
                   <Link to={post.slug} css={{ textDecoration: 'none', color: 'inherit'}}>
-                  <img style={style.img}  src={post.cover} />
+                  <Img style={style.img}  sizes={post.cover.childImageSharp.sizes} />
                   <FlatButton label="Read More" fullWidth={true}/>
                   </Link>
                   </Col>
@@ -87,16 +88,16 @@ class CategoryList extends React.Component {
                   <div style={style.text}>{post.date}</div>
                   <div style={style.text}>Category: {post.category}</div>
                   <p style={style.text} dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-                  
+
                   </Link>
                   </Col>
                   </Row>
               </Paper>
-              
+
             </div>
 
           ))
-          
+
         }
         </Grid>
       </div>

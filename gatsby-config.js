@@ -8,7 +8,14 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/pages/posts`,
-      }
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/posts/images`,
+        name: `images`,
+      },
     },
     {
       resolve: `gatsby-source-prismic`,
@@ -24,12 +31,32 @@ module.exports = {
     //     accessToken: `6f35edf0db39085e9b9c19bd92943e4519c77e72c852d961968665f1324bfc94`,
     //   },
     // },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-remark-responsive-iframe`,
+      options: {
+        wrapperStyle: `margin-bottom: 1.0725rem`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typography`,
     `gatsby-plugin-glamor`,
-    `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
     `gatsby-plugin-twitter`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-source-twitter`,
     //   options: {

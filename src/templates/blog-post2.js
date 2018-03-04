@@ -6,6 +6,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import FlatButton from 'material-ui/FlatButton';
 import config from '../../data/SiteConfig';
 import '../layouts/index.css';
+import Img from 'gatsby-image';
 
 const style = {
   height: '100%',
@@ -37,7 +38,7 @@ export default ({ data }) => {
                 <p className="myheading">Date: {post.frontmatter.date}</p>
               </Col>
               <Col xs={12} sm={8} md={6} lg={6}>
-                <img src={post.frontmatter.cover} />
+                <Img sizes={post.frontmatter.cover.childImageSharp.sizes} />
               </Col>
             </Row>
             <Row>
@@ -63,7 +64,13 @@ export const query = graphql`
       html
       frontmatter {
         title
-        cover
+        cover {
+          childImageSharp {
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
         author
         date
       }

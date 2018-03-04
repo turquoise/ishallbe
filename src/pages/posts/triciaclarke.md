@@ -7,7 +7,7 @@ tags:
 - tag 1
 - tag 2
 - tag 3
-cover: "https://picsum.photos/300/200/?image=486"
+cover: './images/trisha2.jpg'
 ---
 
 # About Euroart (Media)
