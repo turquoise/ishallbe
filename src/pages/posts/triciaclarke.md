@@ -2,7 +2,7 @@
 title: "About Euroart (Media)"
 date: "2018-03-02"
 author: "Trisha Clarke"
-category: "scripts"
+category: "euroart"
 tags:
 - tag 1
 - tag 2

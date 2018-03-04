@@ -2,7 +2,7 @@
 title: "Kickstarter"
 date: "2018-03-01"
 author: "Tricia Clarke"
-category: "location"
+category: "kickstarter"
 tags:
 - tag 2
 - tag 3

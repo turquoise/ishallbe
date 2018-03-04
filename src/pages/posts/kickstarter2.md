@@ -2,7 +2,7 @@
 title: "Kickstarter"
 date: "2018-03-01"
 author: "Tricia Clarke"
-category: "filming"
+category: "kickstarter"
 tags:
 - tag 1
 - tag 4

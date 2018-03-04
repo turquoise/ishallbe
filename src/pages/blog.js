@@ -80,19 +80,20 @@ class Blog extends React.Component {
     const postEdges = this.props.data.posts.edges;
     const locationEdges = this.props.data.location.edges;
     const scriptsEdges = this.props.data.scripts.edges;
-    const filmingEdges = this.props.data.filming.edges;
-    const tagsEdges = this.props.data.tags.edges;
+    //const filmingEdges = this.props.data.filming.edges;
+    //const tagsEdges = this.props.data.tags.edges;
 
 
     if (this.state.category === 'all') {
       return <IndexList postEdges={postEdges} />
-    } else if (this.state.category === 'scripts' ) {
+    } else if (this.state.category === 'euroart' ) {
       return <ScriptsList scriptsEdges={scriptsEdges} />
-    } else if (this.state.category === 'location' ) {
+    } else if (this.state.category === 'kickstarter' ) {
       return <LocationList locationEdges={locationEdges} />
-    } else if (this.state.category === 'filming' ) {
-      return <FilmingList filmingEdges={filmingEdges} />
     }
+    //else if (this.state.category === 'filming' ) {
+      //return <FilmingList filmingEdges={filmingEdges} />
+    //}
 
   }
 
@@ -124,9 +125,9 @@ class Blog extends React.Component {
           <h4 className="myheading" style={style.categorydiv}>Categories:</h4>
           <div style={style.categorydiv}>
             <h5 onClick={ () => this.setState({ category: 'all', tag: ''}) }>All</h5>
-            <h5 onClick={ () => this.setState({ category: 'scripts', tag: ''}) }>Scripts</h5>
-            <h5 onClick={ () => this.setState({ category: 'location', tag: ''}) }>Location</h5>
-            <h5 onClick={ () => this.setState({ category: 'filming', tag: ''}) }>Filming</h5>
+            <h5 onClick={ () => this.setState({ category: 'euroart', tag: ''}) }>EuroArt</h5>
+            <h5 onClick={ () => this.setState({ category: 'kickstarter', tag: ''}) }>Kickstarter</h5>
+            {/*<h5 onClick={ () => this.setState({ category: 'filming', tag: ''}) }>Filming</h5>*/}
             </div>
           </Paper>
           <br/>
@@ -195,7 +196,7 @@ query IndexQuery($tag: [String!]) {
       }
     }
   }
-  location: allMarkdownRemark(filter: {frontmatter: {category: {eq: "location"}}}) {
+  location: allMarkdownRemark(filter: {frontmatter: {category: {eq: "kickstarter"}}}) {
     totalCount
     edges {
       node {
@@ -220,7 +221,7 @@ query IndexQuery($tag: [String!]) {
     }
   }
 
-  scripts: allMarkdownRemark(filter: {frontmatter: {category: {eq: "scripts"}}}) {
+  scripts: allMarkdownRemark(filter: {frontmatter: {category: {eq: "euroart"}}}) {
     totalCount
     edges {
       node {
