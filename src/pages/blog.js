@@ -125,7 +125,7 @@ class Blog extends React.Component {
           <h4 className="myheading" style={style.categorydiv}>Categories:</h4>
           <div style={style.categorydiv}>
             <h5 onClick={ () => this.setState({ category: 'all', tag: ''}) }>All</h5>
-            <h5 onClick={ () => this.setState({ category: 'euroart', tag: ''}) }>EuroArt</h5>
+            <h5 onClick={ () => this.setState({ category: 'euroart', tag: ''}) }>EuroArt (Media) Ltd</h5>
             <h5 onClick={ () => this.setState({ category: 'kickstarter', tag: ''}) }>Kickstarter</h5>
             {/*<h5 onClick={ () => this.setState({ category: 'filming', tag: ''}) }>Filming</h5>*/}
             </div>
