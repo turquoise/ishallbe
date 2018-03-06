@@ -80,7 +80,7 @@ const Header = () => (
           <Col xs={12} smOffset={4} sm={8} mdOffset={6} md={6} lgOffset={7} lg={5}>
           <br/><br/>
           <Link to="/blog/"  style={mystyles.a}>
-            <div  className="button">
+            <div  className="btn btn-effects">
               Read the Blog
             </div>
             </Link>
